@@ -26,7 +26,6 @@ public abstract class VotingSystem {
 	protected MultiMemberPage pageMultiMember;
 	protected ResultsPage pageResults;
 	//protected RepresentativeViewPage pageRepresentativeView;
-	
 	private static int timesRan = 1; 
 	
 	@Parameters({ "link", "browser", "adminLink", "representativeLink" })
@@ -36,13 +35,13 @@ public abstract class VotingSystem {
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\User\\workspace\\Election-automation\\chromedriver.exe");
+					"C:\\Users\\User\\workspace\\Projektas\\Election_automation\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("ie")) {
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\User\\workspace\\Election-automation\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "C:\\Users\\User\\workspace\\Projektas\\Election-automation\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		} else if (browser.equalsIgnoreCase("opera")){
-			System.setProperty("webdriver.opera.driver", "C:\\Users\\User\\workspace\\Election-automation\\operadriver.exe");
+			System.setProperty("webdriver.opera.driver", "C:\\Users\\User\\workspace\\Projektas\\Election-automation\\operadriver.exe");
 			driver = new OperaDriver();
 		}else {
 			throw new Exception("Browser is not correct");

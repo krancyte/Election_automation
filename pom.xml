@@ -7,6 +7,9 @@
 	<properties>
 		<jre.level>1.7</jre.level>
 		<jdk.level>1.7</jdk.level>
+		 <project.java.version>1.8</project.java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<build>

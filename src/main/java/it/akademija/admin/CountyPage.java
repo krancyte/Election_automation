@@ -81,6 +81,8 @@ public class CountyPage {
 		county = dReader.getTestData(countyFile);
 		for (String item : county) {
 			registerCounty(item, "");
+			System.out.println(alert.getText());
+			System.out.println("Teste: " + "Apygarda " + item + " sukurta");
 			Assert.assertTrue(alert.getText().contains("Apygarda " + item + " sukurta"));
 		}
 	}
@@ -103,6 +105,7 @@ public class CountyPage {
 	}
 
 	protected void addCandidatesList(String countyName, String candidatesList) {
+		utilities.waitToLoad("//*[@id='register-button']");
 		countyRow = utilities.findElementForDeletingAndEditing(menuCounty, countyName);
 		driver.findElement(By.xpath("//tbody/tr[" + countyRow + "]/td[2]/button[1]")).click();
 		buttonToUploadFile = driver.findElement(By.xpath("//tbody/tr[" + countyRow + "]//input"));
@@ -113,7 +116,7 @@ public class CountyPage {
 		
 		
 		utilities.waitForJavascript();
-		//blogai parasyta: įkeltas vienmandaties apygardos sąrašas
+		//blogai parasyta: ÄÆkeltas vienmandaties apygardos sÄ…raÅ�as
 		Assert.assertTrue(alertSuccessMessage.getText().contains("Apygardai sėkmingai įkeltas vienmandaties apygardos sąrašas"));
 		utilities.waitForJavascript();
 		System.out.println(driver.findElements(By.xpath("//tr[" + countyRow + "]//td[2]/div[1]//*[@id='modal-close-button']")).size());

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="wrongPassword" value="1234"/>
   <parameter name="countyFile" value="src/test/resources/county-input.txt"/>
   <parameter name="variousDistrictsVotersFile" value="src/test/resources/variousDistrictsVoters-input.txt"/>
@@ -22,7 +22,7 @@
   <parameter name="newCountyName" value="Akmenėss"/>
   <parameter name="newCandidateNumber" value="37"/>
   <parameter name="newCandidateBirthDate" value="1959-06-15"/>
-  <parameter name="districtNameToDelete" value="Rugiu"/>
+  <parameter name="districtNameToDelete" value="Rugių"/>
   <parameter name="countyName" value="Akmenes"/>
   <parameter name="newDistrictVoter" value="2000"/>
   <parameter name="newCandidateInfo" value="Socialdemokratas"/>
@@ -42,59 +42,20 @@
   <parameter name="candidateName" value="Algirdas"/>
   <parameter name="candidateSurname" value="Paleckis"/>
   <parameter name="districtNameToEdit" value="Jovaroo"/>
-  <parameter name="differentCounty" value="Senamiescio"/>
+  <parameter name="differentCounty" value="Senamiesčioo"/>
   <parameter name="candidateNumber" value="88"/>
   <parameter name="partyCsvFile" value="data-party-3.csv"/>
   <parameter name="partyNumber" value="56"/>
   <parameter name="representativeName" value="Birutė"/>
   <parameter name="newCandidateName" value="Algis"/>
   <parameter name="newPartyName" value="Zuokucio partija"/>
-  <test name="ChromeTest(failed)" parallel="tests">
-    <parameter name="browser" value="Chrome"/>
+  <test name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="it.akademija.admin.PartyTest">
-        <methods>
-          <include name="registerPartyTest2" invocation-numbers="0"/>
-          <include name="deleteCandidatesTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- it.akademija.admin.PartyTest -->
-      <class name="it.akademija.admin.DistrictTest">
-        <methods>
-          <include name="settingUp"/>
-          <include name="editDistrictTest" invocation-numbers="0"/>
-          <include name="deleteDistrictTest" invocation-numbers="0"/>
-          <include name="endingTestActivities"/>
-        </methods>
-      </class> <!-- it.akademija.admin.DistrictTest -->
-      <class name="it.akademija.admin.ResultsTest">
-        <methods>
-          <include name="deleteResultsInSingleMemberTest"/>
-        </methods>
-      </class> <!-- it.akademija.admin.ResultsTest -->
-      <class name="it.akademija.representative.MultiMemberTest">
-        <methods>
-          <include name="fillingMultiMemberResults"/>
-        </methods>
-      </class> <!-- it.akademija.representative.MultiMemberTest -->
-      <class name="it.akademija.representative.SingleMemberTest">
-        <methods>
-          <include name="fillingSingleMemberResults"/>
-        </methods>
-      </class> <!-- it.akademija.representative.SingleMemberTest -->
-      <class name="it.akademija.admin.CandidatesTest">
-        <methods>
-          <include name="editNameAndSurnameTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- it.akademija.admin.CandidatesTest -->
-      <class name="it.akademija.admin.RepresentativeTest">
-        <methods>
-          <include name="registerSingleRepresentativeTest" invocation-numbers="0"/>
-          <include name="registerMultipleRepresentativesTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- it.akademija.admin.RepresentativeTest -->
       <class name="it.akademija.admin.CountyTest">
         <methods>
           <include name="settingUp"/>
+          <include name="addCandidatesListTest" invocation-numbers="0"/>
           <include name="endingTestActivities"/>
         </methods>
       </class> <!-- it.akademija.admin.CountyTest -->

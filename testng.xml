@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" thread-count="2" parallel="tests">
+<suite name="Suite">
 	<parameter name="link" value="http://localhost:9090" />
 	<parameter name="usernameAdmin" value="admin" />
 	<parameter name="password" value="admin" />
@@ -16,12 +16,12 @@
 	<parameter name="districtName" value="Fabijoniskiu" />
 	<parameter name="districtAddress" value="Fabijoniskiu g. 15, Vilnius" />
 	<parameter name="districtVoter" value="2416" />
-	<parameter name="districtNameToDelete" value="Rugiu" />
+	<parameter name="districtNameToDelete" value="Rugių" />
 	<parameter name="districtNameToEdit" value="Jovaroo" />
 	<parameter name="newDistrictName" value="Jovarų" />
 	<parameter name="newDistrictAddress" value="S. Stanevičiaus g. 100, Vilnius" />
 	<parameter name="newDistrictVoter" value="2000" />
-	<parameter name="differentCounty" value="Senamiescio" />
+	<parameter name="differentCounty" value="Senamiesčioo" />
 	<parameter name="districtFile" value="src/test/resources/district-input.txt" />
 	<parameter name="districtAddressFile"
 		value="src/test/resources/districtAddress-input.txt" />
@@ -60,17 +60,11 @@
 	<parameter name="newCandidateInfo" value="Socialdemokratas" />
 	<parameter name="newCandidateNumber" value="37" />
 	<test name="ChromeTest">
-		<parameter name="browser" value="Chrome" />
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="it.akademija.admin.CountyTest" />
-			<class name="it.akademija.admin.DistrictTest" />
-			<class name="it.akademija.admin.RepresentativeTest" />
-			<class name="it.akademija.admin.PartyTest" />
-			<class name="it.akademija.admin.CandidatesTest" />
-		
-			<class name="it.akademija.representative.SingleMemberTest" />
-			<class name="it.akademija.representative.MultiMemberTest" />
-			<class name="it.akademija.admin.ResultsTest" />
+			
+			
 		</classes>
 	</test>
 	<!--

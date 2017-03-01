@@ -14,7 +14,7 @@ public class LoginPage {
 	WebElement menuLogin;
 	
 	@FindBy(id = "login-input")
-	WebElement fieldLogin;
+	WebElement fieldUser;
 	
 	@FindBy(id = "password-input")
 	WebElement fieldPassword;
@@ -25,11 +25,11 @@ public class LoginPage {
 	@FindBy(className = "alert")
 	WebElement alert;
 	
-	@FindBy(partialLinkText = "Rinkimų Sistema")
-	WebElement textElection;
+	@FindBy(id = "logout-button")
+	WebElement buttonLogout;
 	
-	@FindBy(linkText = "none")
-	WebElement textNoneLoggedIn;
+	@FindBy(linkText = "Pradinis")
+	WebElement textPradinis;
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -37,14 +37,14 @@ public class LoginPage {
 	}
 
 	protected void login(String username, String password){
-		fieldLogin.clear();
-		fieldLogin.sendKeys(username);
+		fieldUser.clear();
+		fieldUser.sendKeys(username);
 		fieldPassword.clear();
 		fieldPassword.sendKeys(password);
 		buttonLogin.click();
 	}
 	
 	protected void clickToLogout() {
-		driver.findElement(By.partialLinkText("Atsijungti")).click();
+		buttonLogout.click();
 	}
 }

@@ -54,13 +54,13 @@ public class DistrictTest extends VotingSystem{
 	}
 	
 	@Parameters({"districtNameToDelete"})
-	@Test(priority = 13, enabled = true)
+	@Test(priority = 13, enabled = false)
 	public void deleteDistrictTest(String districtNameToDelete){
 		pageDistrict.deleteDistrict(districtNameToDelete);
 		Assert.assertTrue(pageDistrict.alert.getText().contains("Apylinke " + districtNameToDelete + " ištrinta."));
 
 		
-		//	Assert.assertTrue(pageDistrict.alert.getText().contains("Apylinkė " + districtName2 + " ištrinta"));
+		//	Assert.assertTrue(pageDistrict.alert.getText().contains("ApylinkÄ— " + districtName2 + " iÅ¡trinta"));
 	}
 	
 }

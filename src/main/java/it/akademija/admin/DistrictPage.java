@@ -18,9 +18,10 @@ import utilities.Utilities;
 
 public class DistrictPage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	private int districtRow;
 	private Utilities utilities;
+	private String firstLetter;
 
 	@FindBy(id = "district-button")
 	WebElement menuDistricts;
@@ -118,12 +119,16 @@ public class DistrictPage {
 				registerDistrict(district, districtAddressIterator.next(), districtVotersIterator.next(), county, "");
 			}
 			utilities.waitToLoad("//*[@id='alert-success-fixed']");
-			Assert.assertTrue(alert.getText().contains("ApylinkÄ— " + district + " sukurta"));
+			Assert.assertTrue(alert.getText().contains("Apylinkë " + district + " sukurta"));
 		}
 	}
 
 	protected void editDistrict(String districtName, String newDistrictName, String newDistrictAddress, String newDistrictVoters, String newCounty) {
-		districtRow = utilities.findElementForDeletingAndEditing(menuDistricts, districtName);
+		firstLetter = districtName.toLowerCase().substring(0, 1);
+		System.out.println("raide: " + firstLetter);
+	//	driver.findElement(By.linkText(firstLetter)).click();
+		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)), districtName);
+		
 		//	utilities.waitForJavascript();
 			driver.findElement(By.xpath("//tbody/tr[" + districtRow + "]//a[1]")).click();
 			registerDistrict(newDistrictName, newDistrictAddress, newDistrictVoters, newCounty, "edit");
@@ -134,8 +139,16 @@ public class DistrictPage {
 	}
 
 	public void deleteDistrict(String districtName) {
-		menuDistricts.click();
-		utilities.waitToLoad("//*[@id='searchable-table_filter']/label/input").sendKeys(districtName);
+		firstLetter = districtName.toLowerCase().substring(0, 1);
+		System.out.println("raide: " + firstLetter);
+	//	driver.findElement(By.linkText(firstLetter)).click();
+		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)), districtName);
+		
+		//	utilities.waitForJavascript();
+		
+		
+		//menuDistricts.click();
+		//utilities.waitToLoad("//*[@id='searchable-table_filter']/label/input").sendKeys(districtName);
 		buttonDelete.click();
 		utilities.waitToLoad("//*[starts-with(@id, 'delete-district')]").click();
 		
