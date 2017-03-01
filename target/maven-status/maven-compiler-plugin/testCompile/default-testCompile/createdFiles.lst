@@ -1,0 +1,9 @@
+it\akademija\admin\TestLoginAdministrator.class
+it\akademija\admin\TestCandidates.class
+it\akademija\representative\TestSingleMember.class
+it\akademija\admin\TestCounty.class
+it\akademija\admin\TestRepresentative.class
+it\akademija\admin\TestDistrict.class
+it\akademija\representative\TestMultiMember.class
+it\akademija\admin\TestParty.class
+it\akademija\admin\VotingSystem.class

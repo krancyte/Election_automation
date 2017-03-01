@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">ChromeTest</td><td class="numi">3</td><td class="numi">2</td><td class="numi_attn">14</td><td class="numi_attn">12</td><td class="numi">243,8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">ChromeTest &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">it.akademija.admin.TestDistrict</td><td><a href="#m1"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749872454</td><td class="numi">0</td></tr>
+<tr><th colspan="4">ChromeTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">it.akademija.admin.TestLoginAdministrator</td><td><a href="#m2"><b>wrongAdministratorLogin</b>  </a></td><td class="numi">1</td><td>1487749637289</td><td class="numi">3089</td></tr><tr class="failedodd"><td><a href="#m3"><b>testLoginAdministrator</b>  </a></td><td class="numi">1</td><td>1487749640378</td><td class="numi">10385</td></tr>
+<tr class="failedeven"><td rowspan="4">it.akademija.admin.TestCounty</td><td><a href="#m4"><b>testRegisterCounty</b>  </a></td><td class="numi">1</td><td>1487749661487</td><td class="numi">603</td></tr><tr class="failedeven"><td><a href="#m5"><b>testRegisterCounty</b>  </a></td><td class="numi">1</td><td>1487749661487</td><td class="numi">603</td></tr><tr class="failedeven"><td><a href="#m6"><b>testEditCounty</b>  </a></td><td class="numi">1</td><td>1487749665857</td><td class="numi">1748</td></tr><tr class="failedeven"><td><a href="#m7"><b>testAddCandidatesList</b>  </a></td><td class="numi">1</td><td>1487749667605</td><td class="numi">1430</td></tr>
+<tr class="failedodd"><td rowspan="6">it.akademija.admin.TestDistrict</td><td><a href="#m8"><b>testRegisterDistrict</b>  </a></td><td class="numi">1</td><td>1487749675416</td><td class="numi">13705</td></tr><tr class="failedodd"><td><a href="#m9"><b>testRegisterExistingDistrictAndAssigntToDifferentCounty</b>  </a></td><td class="numi">1</td><td>1487749689121</td><td class="numi">7290</td></tr><tr class="failedodd"><td><a href="#m10"><b>testRegisterMultipleDistrictsToDifferentCounties</b>  </a></td><td class="numi">1</td><td>1487749696412</td><td class="numi">6665</td></tr><tr class="failedodd"><td><a href="#m11"><b>testRegisterMultipleDistrictsToOneCounty</b>  </a></td><td class="numi">1</td><td>1487749703078</td><td class="numi">7091</td></tr><tr class="failedodd"><td><a href="#m12"><b>testDeleteDistrict</b>  </a></td><td class="numi">1</td><td>1487749710169</td><td class="numi">162271</td></tr><tr class="failedodd"><td><a href="#m13"><b>testEditDistrict</b>  </a></td><td class="numi">1</td><td>1487749872442</td><td class="numi">8</td></tr>
+<tr><th colspan="4">ChromeTest &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="2">it.akademija.admin.TestCandidates</td><td><a href="#m14"><b>settingUp</b>  </a></td><td class="numi">1</td><td>1487749874480</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m15"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874481</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">it.akademija.admin.TestLoginAdministrator</td><td><a href="#m16"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874483</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">it.akademija.representative.TestMultiMember</td><td><a href="#m17"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874482</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="2">it.akademija.admin.TestParty</td><td><a href="#m18"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874480</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m19"><b>settingUp</b>  </a></td><td class="numi">1</td><td>1487749874476</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">it.akademija.representative.TestMultiMember</td><td><a href="#m20"><b>settingUp</b>  </a></td><td class="numi">1</td><td>1487749874482</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="2">it.akademija.admin.TestRepresentative</td><td><a href="#m21"><b>settingUp</b>  </a></td><td class="numi">1</td><td>1487749874475</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m22"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874476</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="2">it.akademija.representative.TestSingleMember</td><td><a href="#m23"><b>settingUp</b>  </a></td><td class="numi">1</td><td>1487749874481</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m24"><b>endingTestActivities</b>  </a></td><td class="numi">1</td><td>1487749874481</td><td class="numi">0</td></tr>
+<tr><th colspan="4">ChromeTest &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="2">it.akademija.admin.TestRepresentative</td><td><a href="#m25"><b>testRegisterMultipleRepresentatives</b>  </a></td><td class="numi">1</td><td>1487749874475</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m26"><b>testRegisterSingleRepresentative</b>  </a></td><td class="numi">1</td><td>1487749874476</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="8">it.akademija.admin.TestParty</td><td><a href="#m27"><b>testRegisterParty</b>  </a></td><td class="numi">2</td><td>1487749874477</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m28"><b>testRegisterParty</b>  </a></td><td class="numi">2</td><td>1487749874477</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m29"><b>testRegisterParty2</b>  </a></td><td class="numi">1</td><td>1487749874478</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m30"><b>testRegisterPartyWithOtherFile</b>  </a></td><td class="numi">1</td><td>1487749874478</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m31"><b>testRegisterPartyWithoutFile</b>  </a></td><td class="numi">1</td><td>1487749874478</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m32"><b>testDeleteCandidates</b>  </a></td><td class="numi">1</td><td>1487749874479</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m33"><b>testEditParty</b>  </a></td><td class="numi">1</td><td>1487749874479</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m34"><b>testDeleteParty</b>  </a></td><td class="numi">1</td><td>1487749874480</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">it.akademija.admin.TestCandidates</td><td><a href="#m35"><b>testEditNameAndSurname</b>  </a></td><td class="numi">1</td><td>1487749874480</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">it.akademija.representative.TestSingleMember</td><td><a href="#m36"><b>fillingSingleMemberResults</b>  </a></td><td class="numi">1</td><td>1487749874481</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">it.akademija.representative.TestMultiMember</td><td><a href="#m37"><b>fillingMultiMemberResults</b>  </a></td><td class="numi">1</td><td>1487749874482</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">it.akademija.admin.TestLoginAdministrator</td><td><a href="#m38"><b>logoutAdministrator</b>  </a></td><td class="numi">1</td><td>1487749874482</td><td class="numi">1</td></tr>
+<tr><th colspan="4">ChromeTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="3">it.akademija.admin.TestCounty</td><td><a href="#m39"><b>testRegisterCounty</b>  </a></td><td class="numi">1</td><td>1487749658933</td><td class="numi">2553</td></tr><tr class="passedodd"><td><a href="#m40"><b>testRegisterCounty</b>  </a></td><td class="numi">1</td><td>1487749658933</td><td class="numi">2553</td></tr><tr class="passedodd"><td><a href="#m41"><b>testRegisterMultipleCounties</b>  </a></td><td class="numi">1</td><td>1487749662091</td><td class="numi">3762</td></tr>
+</table>
+<h1>ChromeTest</h1>
+<h2 id="m1">it.akademija.admin.TestDistrict:endingTestActivities</h2>
+<div style="padding-left:3em">
+<p>chrome not reachable
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.02 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.1.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir2856_17004}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 28d0e545671838fb85cf2df4f6d45b35</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:521)
+<br/>at it.akademija.admin.VotingSystem.endingTestActivities(VotingSystem.java:103)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.lang.reflect.Method.invoke(Method.java:497)
+<br/>at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+<br/>at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+<br/>at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:767)
+<br/>at org.testng.TestRunner.run(TestRunner.java:617)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+<br/>at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+<br/>at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+<br/>at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+<br/>at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+<br/>at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+<br/>at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+<br/>at java.lang.Thread.run(Thread.java:745)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">it.akademija.admin.TestDistrict:testRegisterMultipleDistrictsToOneCounty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>src/test/resources/district-input.txt</td>
+<td>src/test/resources/districtAddress-input.txt</td>
+<td>src/test/resources/districtVoters-input.txt</td>
+<td>Akmen?ss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:109)
+<br/>at it.akademija.admin.TestDistrict.testRegisterMultipleDistrictsToOneCounty(TestDistrict.java:50)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">it.akademija.admin.TestDistrict:testRegisterExistingDistrictAndAssigntToDifferentCounty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>Fabijoniskiu</td>
+<td>Fabijoniskiu g. 15, Vilnius</td>
+<td>2416</td>
+<td>Dainavoss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.TestDistrict.testRegisterExistingDistrictAndAssigntToDifferentCounty(TestDistrict.java:44)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">it.akademija.admin.TestLoginAdministrator:wrongAdministratorLogin</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>1234</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.TestLoginAdministrator.wrongAdministratorLogin(TestLoginAdministrator.java:16)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">it.akademija.admin.TestCounty:testAddCandidatesList</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Akmen?ss</td>
+<td>data-county.csv</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.CountyPage.addCandidatesList(CountyPage.java:86)
+<br/>at it.akademija.admin.TestCounty.testAddCandidatesList(TestCounty.java:55)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">it.akademija.admin.TestDistrict:testRegisterMultipleDistrictsToDifferentCounties</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>src/test/resources/variousDistricts-input.txt</td>
+<td>src/test/resources/variousDistrictsAddress-input.txt</td>
+<td>src/test/resources/variousDistrictsVoters-input.txt</td>
+<td>src/test/resources/county-input.txt</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:109)
+<br/>at it.akademija.admin.TestDistrict.testRegisterMultipleDistrictsToDifferentCounties(TestDistrict.java:56)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">it.akademija.admin.TestCounty:testRegisterCounty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Akmenes</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.TestCounty.testRegisterCounty(TestCounty.java:31)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">it.akademija.admin.TestDistrict:testDeleteDistrict</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Rugiu</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>null</p>
+utilities.Utilities.findElementForDeletingAndEditing(Utilities.java:56)
+<br/>at it.akademija.admin.DistrictPage.deleteCounty(DistrictPage.java:125)
+<br/>at it.akademija.admin.TestDistrict.testDeleteDistrict(TestDistrict.java:69)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">it.akademija.admin.TestDistrict:testEditDistrict</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>Jovaro</td>
+<td>Jovar?</td>
+<td>S. Stanevi?iaus g. 100, Vilnius</td>
+<td>2000</td>
+<td>Akmen?ss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="5">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6 milliseconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.1.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir2856_17004}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 28d0e545671838fb85cf2df4f6d45b35
+*** Element info: {Using=id, value=district-button}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:218)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy6.click(Unknown Source)
+<br/>at utilities.Utilities.findElementForDeletingAndEditing(Utilities.java:52)
+<br/>at it.akademija.admin.DistrictPage.editDistrict(DistrictPage.java:114)
+<br/>at it.akademija.admin.TestDistrict.testEditDistrict(TestDistrict.java:62)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">it.akademija.admin.TestDistrict:testRegisterDistrict</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>Fabijoniskiu</td>
+<td>Fabijoniskiu g. 15, Vilnius</td>
+<td>2416</td>
+<td>Akmen?ss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>District wasn&apos;t succesfully created. expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at it.akademija.admin.TestDistrict.testRegisterDistrict(TestDistrict.java:20)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">it.akademija.admin.TestLoginAdministrator:testLoginAdministrator</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>admin</td>
+<td>admin</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;partial link text&quot;,&quot;selector&quot;:&quot;Rinkimų Sistema&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.1.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir13544_24145}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 3fb84d3259e3278ecee2b1778d59d7a0
+*** Element info: {Using=partial link text, value=Rinkimų Sistema}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByPartialLinkText(RemoteWebDriver.java:436)
+<br/>at org.openqa.selenium.By$ByPartialLinkText.findElement(By.java:273)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+<br/>at it.akademija.admin.TestLoginAdministrator.testLoginAdministrator(TestLoginAdministrator.java:27)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">it.akademija.admin.TestCounty:testEditCounty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Akmenes</td>
+<td>Akmen?ss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.TestCounty.testEditCounty(TestCounty.java:48)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">it.akademija.admin.TestCandidates:settingUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">it.akademija.admin.TestCandidates:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">it.akademija.admin.TestLoginAdministrator:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">it.akademija.representative.TestMultiMember:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">it.akademija.admin.TestParty:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">it.akademija.admin.TestParty:settingUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">it.akademija.representative.TestMultiMember:settingUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">it.akademija.admin.TestRepresentative:settingUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">it.akademija.admin.TestRepresentative:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">it.akademija.representative.TestSingleMember:settingUp</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">it.akademija.representative.TestSingleMember:endingTestActivities</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">it.akademija.admin.TestRepresentative:testRegisterSingleRepresentative</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Birut?</td>
+<td>Stolyt?</td>
+<td>Fabijoniskiu</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">it.akademija.admin.TestParty:testRegisterPartyWithoutFile</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Bruzgesss partija</td>
+<td>442</td>
+<td></td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">it.akademija.admin.TestParty:testDeleteCandidates</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Bruzgesss partija</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">it.akademija.admin.TestLoginAdministrator:logoutAdministrator</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">it.akademija.admin.TestParty:testEditParty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Zuokuciooo partija</td>
+<td>Zuokucio partija</td>
+<td>66</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">it.akademija.admin.TestParty:testRegisterPartyWithOtherFile</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Bruzgesss partija</td>
+<td>442</td>
+<td>data-party-not-csv.txt</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">it.akademija.admin.TestParty:testRegisterParty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Zuokuciooo partija</td>
+<td>56</td>
+<td>data-party-3.csv</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">it.akademija.admin.TestParty:testRegisterParty2</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Bruzgesss partija</td>
+<td>442</td>
+<td>data-party-3.csv</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">it.akademija.admin.TestCandidates:testEditNameAndSurname</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th></tr>
+<tr class="param stripe"><td>Mantas</td>
+<td>Mantauskas</td>
+<td>1966-06-06</td>
+<td>Zuokucio partija</td>
+<td>Algis</td>
+<td>Kurinskis</td>
+<td>1959-06-15</td>
+<td>Socialdemokratas</td>
+<td>37</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">it.akademija.representative.TestSingleMember:fillingSingleMemberResults</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">it.akademija.admin.TestParty:testRegisterParty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Zuokuciooo partija</td>
+<td>56</td>
+<td>data-party-3.csv</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">it.akademija.admin.TestParty:testDeleteParty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Bruzgesss partija</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">it.akademija.admin.TestRepresentative:testRegisterMultipleRepresentatives</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>src/test/resources/representativeNames-input.txt</td>
+<td>src/test/resources/representativeSurnames-input.txt</td>
+<td>src/test/resources/variousDistricts-input.txt</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">it.akademija.representative.TestMultiMember:fillingMultiMemberResults</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">it.akademija.admin.TestCounty:testRegisterCounty</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Akmenes</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">it.akademija.admin.TestCounty:testRegisterMultipleCounties</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>src/test/resources/county-input.txt</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
