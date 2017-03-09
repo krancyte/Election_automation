@@ -2,6 +2,8 @@ package it.akademija.admin;
 
 import org.testng.annotations.Test;
 
+import it.akademija.voting.VotingSystem;
+
 public class ResultsTest extends VotingSystem {
 	
 

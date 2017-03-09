@@ -5,23 +5,25 @@
 	<parameter name="password" value="admin" />
 	<parameter name="wrongPassword" value="1234" />
 
-	<parameter name="adminLink" value="http://localhost:9090/#/admin/" />
+	<parameter name="loginLink" value="http://localhost:9090/#/login/" />
 	<parameter name="representativeLink" value="http://localhost:9090/#/representative/" />
+	
 	<parameter name="countyFile" value="src/test/resources/county-input.txt" />
-	<parameter name="countyName" value="Akmenes" />
-	<parameter name="countyName2" value="Dainavoss" />
-	<parameter name="newCountyName" value="Akmenėss" />
+	<parameter name="countyName" value="Akmeninės" />
+	<parameter name="newCountyName" value="Akmeninikų" />
+	<parameter name="countyToDelete" value="Senamiestėnų" />
 	<parameter name="candidatesList" value="data-county.csv" />
-
-	<parameter name="districtName" value="Fabijoniskiu" />
-	<parameter name="districtAddress" value="Fabijoniskiu g. 15, Vilnius" />
+	
+	<parameter name="districtName" value="Fabijonkių" />
+	<parameter name="districtAddress" value="Fabijonų g. 15, Vilnius" />
 	<parameter name="districtVoter" value="2416" />
-	<parameter name="districtNameToDelete" value="Rugių" />
-	<parameter name="districtNameToEdit" value="Jovaroo" />
-	<parameter name="newDistrictName" value="Jovarų" />
+	<parameter name="countyName2" value="Naujamiestėnų" />
+	<parameter name="districtNameToDelete" value="Rugiškių" />
+	<parameter name="districtNameToEdit" value="Jovariškių" />
+	<parameter name="newDistrictName" value="Jovarikantiškių" />
 	<parameter name="newDistrictAddress" value="S. Stanevičiaus g. 100, Vilnius" />
 	<parameter name="newDistrictVoter" value="2000" />
-	<parameter name="differentCounty" value="Senamiesčioo" />
+	
 	<parameter name="districtFile" value="src/test/resources/district-input.txt" />
 	<parameter name="districtAddressFile"
 		value="src/test/resources/districtAddress-input.txt" />
@@ -59,13 +61,29 @@
 	<parameter name="newCandidateBirthDate" value="1959-06-15" />
 	<parameter name="newCandidateInfo" value="Socialdemokratas" />
 	<parameter name="newCandidateNumber" value="37" />
-	<test name="ChromeTest">
+	<test name="Suite">
+		
 		<parameter name="browser" value="chrome" />
+		<!--
+		<groups>
+    		<dependencies>
+     			<group name="admin-actions" depends-on="admin-login" />
+
+    		</dependencies>
+  		</groups>
+  			-->
+		
 		<classes>
+			
+			
 			<class name="it.akademija.admin.CountyTest" />
-			
-			
+			<class name="it.akademija.admin.DistrictTest" />
+			<class name="it.akademija.admin.RepresentativeTest" />
+			<class name="it.akademija.admin.PartyTest" />
+			<class name="it.akademija.admin.CandidatesTest" />
+			<class name="it.akademija.voting.DeletionOfAllData" />
 		</classes>
+		
 	</test>
 	<!--
 	<test name="FirefoxTest">

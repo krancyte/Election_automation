@@ -31,60 +31,179 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">ChromeTest</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi">0</td><td class="numi">43,6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">ChromeTest</td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi_attn">6</td><td class="numi">132,7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">ChromeTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="4">it.akademija.admin.DistrictTest</td><td><a href="#m1"><b>registerMultipleDistrictsToDifferentCountiesTest</b>  </a></td><td class="numi">1</td><td>1488442927812</td><td class="numi">3000</td></tr><tr class="failedodd"><td><a href="#m2"><b>registerMultipleDistrictsToOneCountyTest</b>  </a></td><td class="numi">1</td><td>1488442930812</td><td class="numi">2515</td></tr><tr class="failedodd"><td><a href="#m3"><b>editDistrictTest</b>  </a></td><td class="numi">1</td><td>1488442933327</td><td class="numi">34391</td></tr><tr class="failedodd"><td><a href="#m4"><b>deleteDistrictTest</b>  </a></td><td class="numi">1</td><td>1488442967734</td><td class="numi">5031</td></tr>
+<tr class="failedeven"><td rowspan="2">it.akademija.admin.RepresentativeTest</td><td><a href="#m5"><b>registerMultipleRepresentativesTest</b>  </a></td><td class="numi">1</td><td>1488442984348</td><td class="numi">8276</td></tr><tr class="failedeven"><td><a href="#m6"><b>registerSingleRepresentativeTest</b>  </a></td><td class="numi">1</td><td>1488442992624</td><td class="numi">4359</td></tr>
 <tr><th colspan="4">ChromeTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">it.akademija.admin.LoginAdministratorTest</td><td><a href="#m1"><b>wrongAdministratorLogin</b>  </a></td><td class="numi">1</td><td>1488367565718</td><td class="numi">1077</td></tr><tr class="passedodd"><td><a href="#m2"><b>loginAdministratorTest</b>  </a></td><td class="numi">1</td><td>1488367566795</td><td class="numi">479</td></tr>
-<tr class="passedeven"><td rowspan="6">it.akademija.admin.CountyTest</td><td><a href="#m3"><b>registerCountyTest</b>  </a></td><td class="numi">2</td><td>1488367577401</td><td class="numi">4087</td></tr><tr class="passedeven"><td><a href="#m4"><b>registerCountyTest</b>  </a></td><td class="numi">2</td><td>1488367577401</td><td class="numi">4087</td></tr><tr class="passedeven"><td><a href="#m5"><b>registerMultipleCountiesTest</b>  </a></td><td class="numi">1</td><td>1488367581489</td><td class="numi">7261</td></tr><tr class="passedeven"><td><a href="#m6"><b>editCountyTest</b>  </a></td><td class="numi">1</td><td>1488367588752</td><td class="numi">1947</td></tr><tr class="passedeven"><td><a href="#m7"><b>deleteCountyTest</b>  </a></td><td class="numi">1</td><td>1488367590699</td><td class="numi">3582</td></tr><tr class="passedeven"><td><a href="#m8"><b>addCandidatesListTest</b>  </a></td><td class="numi">1</td><td>1488367594282</td><td class="numi">3424</td></tr>
+<tr class="passedodd"><td rowspan="6">it.akademija.admin.CountyTest</td><td><a href="#m7"><b>registerCountyTest</b>  </a></td><td class="numi">2</td><td>1488442877695</td><td class="numi">12417</td></tr><tr class="passedodd"><td><a href="#m8"><b>registerCountyTest</b>  </a></td><td class="numi">2</td><td>1488442877695</td><td class="numi">12417</td></tr><tr class="passedodd"><td><a href="#m9"><b>registerMultipleCountiesTest</b>  </a></td><td class="numi">1</td><td>1488442890112</td><td class="numi">8672</td></tr><tr class="passedodd"><td><a href="#m10"><b>editCountyTest</b>  </a></td><td class="numi">1</td><td>1488442898784</td><td class="numi">2562</td></tr><tr class="passedodd"><td><a href="#m11"><b>deleteCountyTest</b>  </a></td><td class="numi">1</td><td>1488442901346</td><td class="numi">4136</td></tr><tr class="passedodd"><td><a href="#m12"><b>addCandidatesListTest</b>  </a></td><td class="numi">1</td><td>1488442905482</td><td class="numi">3260</td></tr>
+<tr class="passedeven"><td rowspan="3">it.akademija.admin.DistrictTest</td><td><a href="#m13"><b>registerDistrictTest</b>  </a></td><td class="numi">2</td><td>1488442919511</td><td class="numi">5551</td></tr><tr class="passedeven"><td><a href="#m14"><b>registerDistrictTest</b>  </a></td><td class="numi">2</td><td>1488442919511</td><td class="numi">5551</td></tr><tr class="passedeven"><td><a href="#m15"><b>registerExistingDistrictAndAssigntToDifferentCountyTest</b>  </a></td><td class="numi">1</td><td>1488442925062</td><td class="numi">2750</td></tr>
 </table>
 <h1>ChromeTest</h1>
-<h2 id="m1">it.akademija.admin.LoginAdministratorTest:loginAdministratorTest</h2>
+<h2 id="m1">it.akademija.admin.DistrictTest:registerMultipleDistrictsToDifferentCountiesTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>admin</td>
-<td>admin</td>
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>src/test/resources/variousDistricts-input.txt</td>
+<td>src/test/resources/variousDistrictsAddress-input.txt</td>
+<td>src/test/resources/variousDistrictsVoters-input.txt</td>
+<td>src/test/resources/county-input.txt</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+<br/>at it.akademija.admin.DistrictTest.registerMultipleDistrictsToDifferentCountiesTest(DistrictTest.java:46)
+<br/>28 lines not shown
+</td></tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">it.akademija.admin.LoginAdministratorTest:wrongAdministratorLogin</h2>
+<h2 id="m2">it.akademija.admin.DistrictTest:registerMultipleDistrictsToOneCountyTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>admin</td>
-<td>1234</td>
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>src/test/resources/district-input.txt</td>
+<td>src/test/resources/districtAddress-input.txt</td>
+<td>src/test/resources/districtVoters-input.txt</td>
+<td>Akmenëss</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="4">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+<br/>at it.akademija.admin.DistrictTest.registerMultipleDistrictsToOneCountyTest(DistrictTest.java:40)
+<br/>28 lines not shown
+</td></tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">it.akademija.admin.CountyTest:registerCountyTest</h2>
+<h2 id="m3">it.akademija.admin.RepresentativeTest:registerMultipleRepresentativesTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>src/test/resources/representativeNames-input.txt</td>
+<td>src/test/resources/representativeSurnames-input.txt</td>
+<td>src/test/resources/variousDistricts-input.txt</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.RepresentativePage.registerMultipleDistrictRepresentative(RepresentativePage.java:89)
+<br/>at it.akademija.admin.RepresentativeTest.registerMultipleRepresentativesTest(RepresentativeTest.java:33)
+<br/>28 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">it.akademija.admin.RepresentativeTest:registerSingleRepresentativeTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>Birutë</td>
+<td>Stolytë</td>
+<td>Fabijoniskiu</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="3">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.RepresentativeTest.registerSingleRepresentativeTest(RepresentativeTest.java:27)
+<br/>28 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">it.akademija.admin.DistrictTest:editDistrictTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>Jovaroo</td>
+<td>Jovarø</td>
+<td>S. Stanevièiaus g. 100, Vilnius</td>
+<td>2000</td>
+<td>Akmenëss</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="5">
+<p>Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[83]/td[1]&quot;}
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.30.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ac9080b-992c-4308-b0a5-ebb5a996636d
+*** Element info: {Using=xpath, value=//tbody/tr[83]/td[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+<br/>at utilities.Utilities.findElementForDeletingAndEditing(Utilities.java:55)
+<br/>at it.akademija.admin.DistrictPage.editDistrict(DistrictPage.java:130)
+<br/>at it.akademija.admin.DistrictTest.editDistrictTest(DistrictTest.java:52)
+<br/>28 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[83]/td[1]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.30.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+<br/>1 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">it.akademija.admin.DistrictTest:deleteDistrictTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>Akmenes</td>
+<tr class="param stripe"><td>Rugiøø</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at it.akademija.admin.DistrictTest.deleteDistrictTest(DistrictTest.java:60)
+<br/>28 lines not shown
+</td></tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">it.akademija.admin.CountyTest:registerMultipleCountiesTest</h2>
+<h2 id="m7">it.akademija.admin.CountyTest:registerMultipleCountiesTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
 <tr class="param stripe"><td>src/test/resources/county-input.txt</td>
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">it.akademija.admin.CountyTest:deleteCountyTest</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>Senamiesèioo</td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">it.akademija.admin.CountyTest:registerCountyTest</h2>
+<h2 id="m8">it.akademija.admin.CountyTest:registerCountyTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
 <tr class="param stripe"><td>Akmenes</td>
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">it.akademija.admin.CountyTest:addCandidatesListTest</h2>
+<h2 id="m9">it.akademija.admin.CountyTest:editCountyTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param stripe"><td>Akmenes</td>
+<td>Akmenëss</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">it.akademija.admin.CountyTest:addCandidatesListTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
 <tr class="param stripe"><td>Akmenëss</td>
@@ -92,10 +211,46 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">it.akademija.admin.CountyTest:editCountyTest</h2>
+<h2 id="m11">it.akademija.admin.DistrictTest:registerExistingDistrictAndAssigntToDifferentCountyTest</h2>
 <table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>Fabijoniskiu</td>
+<td>Fabijoniskiu g. 15, Vilnius</td>
+<td>2416</td>
+<td>Dainavoss</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">it.akademija.admin.CountyTest:registerCountyTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
 <tr class="param stripe"><td>Akmenes</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">it.akademija.admin.CountyTest:deleteCountyTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>Senamiesèioo</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">it.akademija.admin.DistrictTest:registerDistrictTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>Fabijoniskiu</td>
+<td>Fabijoniskiu g. 15, Vilnius</td>
+<td>2416</td>
+<td>Akmenëss</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">it.akademija.admin.DistrictTest:registerDistrictTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
+<tr class="param stripe"><td>Fabijoniskiu</td>
+<td>Fabijoniskiu g. 15, Vilnius</td>
+<td>2416</td>
 <td>Akmenëss</td>
 </tr>
 </table>

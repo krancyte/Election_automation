@@ -2,7 +2,6 @@ package it.akademija.admin;
 
 import java.io.IOException;
 
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -46,19 +45,19 @@ public class DistrictPage {
 
 	@FindBy(className = "alert")
 	WebElement alert;
-	
+
 	@FindBy(className = "btn")
 	WebElement buttonToConfirmDeleting;
-	
+
 	@FindBy(xpath = "//*[@id='searchable-table_filter']/label/input")
 	WebElement fieldSearch;
-	
+
 	@FindBy(xpath = "//*[contains(@id, 'edit-district')]")
 	WebElement buttonEdit;
-	
+
 	@FindBy(xpath = "//*[contains(@id, 'confirm-delete-button')]")
 	WebElement buttonDelete;
-	
+
 	public DistrictPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -75,19 +74,23 @@ public class DistrictPage {
 	private Iterator<String> countyNameIterator;
 	private Iterator<String> districtNameIterator;
 
-	protected void registerDistrict(String districtName, String districtAddress, String districtVoters, String county, String enterOrEdit) {
-		if (!enterOrEdit.equals("edit")){
+	public void registerDistrict(String districtName, String districtAddress, String districtVoters, String county,
+			String enterOrEdit) {
+		if (!enterOrEdit.equals("edit")) {
 			menuDistricts.click();
 			buttonRegister.click();
 		} else {
 			clearTheField(fieldDistrictName);
+			clearTheField(fieldAddress);
+			utilities.waitForJavascript();
 		}
 		fieldDistrictName.sendKeys(districtName);
-		if (enterOrEdit.equals("edit")){
+		if (enterOrEdit.equals("edit")) {
+			// System.out.println(districtName + " editina");
 			clearTheField(fieldAddress);
 		}
 		fieldAddress.sendKeys(districtAddress);
-		if (enterOrEdit.equals("edit")){
+		if (enterOrEdit.equals("edit")) {
 			clearTheField(fieldVoters);
 		}
 		fieldVoters.sendKeys(districtVoters);
@@ -118,40 +121,49 @@ public class DistrictPage {
 			} else {
 				registerDistrict(district, districtAddressIterator.next(), districtVotersIterator.next(), county, "");
 			}
-			utilities.waitToLoad("//*[@id='alert-success-fixed']");
+			// utilities.waitToLoad("//*[@id='alert-success-fixed']");
+			utilities.waitToLoad("//*[@id='register-button']");
+
 			Assert.assertTrue(alert.getText().contains("Apylinkë " + district + " sukurta"));
 		}
 	}
 
-	protected void editDistrict(String districtName, String newDistrictName, String newDistrictAddress, String newDistrictVoters, String newCounty) {
+	protected void editDistrict(String districtName, String newDistrictName, String newDistrictAddress,
+			String newDistrictVoters, String newCounty) {
+		menuDistricts.click();
 		firstLetter = districtName.toLowerCase().substring(0, 1);
 		System.out.println("raide: " + firstLetter);
-	//	driver.findElement(By.linkText(firstLetter)).click();
-		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)), districtName);
-		
-		//	utilities.waitForJavascript();
-			driver.findElement(By.xpath("//tbody/tr[" + districtRow + "]//a[1]")).click();
-			registerDistrict(newDistrictName, newDistrictAddress, newDistrictVoters, newCounty, "edit");
+		// driver.findElement(By.linkText(firstLetter)).click();
+		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)),
+				districtName, "district");
+		System.out.println("editinimui eilute: " + districtRow);
+		// utilities.waitForJavascript();
+		driver.findElement(By.xpath("//tbody/tr[" + districtRow + "]//a[1]")).click();
+		// clearTheField(fieldDistrictName);
+		// clearTheField(fieldAddress);
+		// clearTheField(fieldVoters);
+		registerDistrict(newDistrictName, newDistrictAddress, newDistrictVoters, newCounty, "edit");
 	}
-	
-	protected void clearTheField(WebElement fieldName){
-		fieldName.clear();	
+
+	protected void clearTheField(WebElement fieldName) {
+		fieldName.clear();
+		utilities.waitForJavascript();
 	}
 
 	public void deleteDistrict(String districtName) {
 		firstLetter = districtName.toLowerCase().substring(0, 1);
 		System.out.println("raide: " + firstLetter);
-	//	driver.findElement(By.linkText(firstLetter)).click();
-		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)), districtName);
-		
-		//	utilities.waitForJavascript();
-		
-		
-		//menuDistricts.click();
-		//utilities.waitToLoad("//*[@id='searchable-table_filter']/label/input").sendKeys(districtName);
+		// driver.findElement(By.linkText(firstLetter)).click();
+		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)),
+				districtName, "district");
+
+		// utilities.waitForJavascript();
+
+		// menuDistricts.click();
+		// utilities.waitToLoad("//*[@id='searchable-table_filter']/label/input").sendKeys(districtName);
 		buttonDelete.click();
 		utilities.waitToLoad("//*[starts-with(@id, 'delete-district')]").click();
-		
+
 	}
 
 }

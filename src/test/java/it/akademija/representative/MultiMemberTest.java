@@ -3,7 +3,7 @@ package it.akademija.representative;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import it.akademija.admin.VotingSystem;
+import it.akademija.voting.VotingSystem;
 
 public class MultiMemberTest extends VotingSystem{
 

@@ -2,12 +2,31 @@ package it.akademija.admin;
 
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import it.akademija.voting.VotingSystem;
+
+@Test(groups = "admin-actions")
 public class DistrictTest extends VotingSystem{
 	
 	private int numberOfTimesTestWasRan = 0;
+	
+	
+	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@BeforeClass
+	public void setUp(String loginLink, String usernameAdmin, String password){
+	//	driver.get(adminLink);
+		pageDistrict = new DistrictPage(driver);
+		pageLogin.login(usernameAdmin, password);
+	}
+	
+//	@AfterClass
+//	public void endingTestActivities() {	
+//		driver.close();
+//	}
 	
 	/**
 	 * TC06 and TC15
@@ -54,7 +73,7 @@ public class DistrictTest extends VotingSystem{
 	}
 	
 	@Parameters({"districtNameToDelete"})
-	@Test(priority = 13, enabled = false)
+	@Test(priority = 13, enabled = true)
 	public void deleteDistrictTest(String districtNameToDelete){
 		pageDistrict.deleteDistrict(districtNameToDelete);
 		Assert.assertTrue(pageDistrict.alert.getText().contains("Apylinke " + districtNameToDelete + " ištrinta."));

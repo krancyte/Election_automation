@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="20.918" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="94.692" tests="15" errors="0" skipped="0" failures="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
@@ -64,12 +64,100 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="wrongAdministratorLogin" classname="it.akademija.admin.LoginAdministratorTest" time="1.077"/>
-  <testcase name="loginAdministratorTest" classname="it.akademija.admin.LoginAdministratorTest" time="0.476"/>
-  <testcase name="registerCountyTest" classname="it.akademija.admin.CountyTest" time="3.151"/>
-  <testcase name="registerCountyTest" classname="it.akademija.admin.CountyTest" time="0.935"/>
-  <testcase name="registerMultipleCountiesTest" classname="it.akademija.admin.CountyTest" time="7.261"/>
-  <testcase name="editCountyTest" classname="it.akademija.admin.CountyTest" time="1.947"/>
-  <testcase name="deleteCountyTest" classname="it.akademija.admin.CountyTest" time="3.582"/>
-  <testcase name="addCandidatesListTest" classname="it.akademija.admin.CountyTest" time="3.424"/>
+  <testcase name="registerCountyTest" classname="it.akademija.admin.CountyTest" time="11.531"/>
+  <testcase name="registerCountyTest" classname="it.akademija.admin.CountyTest" time="0.883"/>
+  <testcase name="registerMultipleCountiesTest" classname="it.akademija.admin.CountyTest" time="8.672"/>
+  <testcase name="editCountyTest" classname="it.akademija.admin.CountyTest" time="2.562"/>
+  <testcase name="deleteCountyTest" classname="it.akademija.admin.CountyTest" time="4.136"/>
+  <testcase name="addCandidatesListTest" classname="it.akademija.admin.CountyTest" time="3.26"/>
+  <testcase name="registerDistrictTest" classname="it.akademija.admin.DistrictTest" time="4.114"/>
+  <testcase name="registerDistrictTest" classname="it.akademija.admin.DistrictTest" time="1.437"/>
+  <testcase name="registerExistingDistrictAndAssigntToDifferentCountyTest" classname="it.akademija.admin.DistrictTest" time="2.75"/>
+  <testcase name="registerMultipleDistrictsToDifferentCountiesTest" classname="it.akademija.admin.DistrictTest" time="3">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+	at it.akademija.admin.DistrictTest.registerMultipleDistrictsToDifferentCountiesTest(DistrictTest.java:46)
+</failure>
+  </testcase>
+  <testcase name="registerMultipleDistrictsToOneCountyTest" classname="it.akademija.admin.DistrictTest" time="2.515">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+	at it.akademija.admin.DistrictTest.registerMultipleDistrictsToOneCountyTest(DistrictTest.java:40)
+</failure>
+  </testcase>
+  <testcase name="editDistrictTest" classname="it.akademija.admin.DistrictTest" time="34.407">
+    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[83]/td[1]&quot;}&#10;Command duration or timeout: 30.07 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.30.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 0ac9080b-992c-4308-b0a5-ebb5a996636d&#10;*** Element info: {Using=xpath, value=//tbody/tr[83]/td[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[83]/td[1]"}
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-O933604', ip: '192.168.30.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ac9080b-992c-4308-b0a5-ebb5a996636d
+*** Element info: {Using=xpath, value=//tbody/tr[83]/td[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at utilities.Utilities.findElementForDeletingAndEditing(Utilities.java:55)
+	at it.akademija.admin.DistrictPage.editDistrict(DistrictPage.java:130)
+	at it.akademija.admin.DistrictTest.editDistrictTest(DistrictTest.java:52)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[83]/td[1]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-O933604', ip: '192.168.30.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]></failure>
+    <system-out><![CDATA[raide: j
+]]></system-out>
+  </testcase>
+  <testcase name="deleteDistrictTest" classname="it.akademija.admin.DistrictTest" time="5.11">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictTest.deleteDistrictTest(DistrictTest.java:60)
+</failure>
+    <system-out><![CDATA[raide: r
+]]></system-out>
+  </testcase>
+  <testcase name="registerMultipleRepresentativesTest" classname="it.akademija.admin.RepresentativeTest" time="8.276">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.RepresentativePage.registerMultipleDistrictRepresentative(RepresentativePage.java:89)
+	at it.akademija.admin.RepresentativeTest.registerMultipleRepresentativesTest(RepresentativeTest.java:33)
+</failure>
+    <system-out><![CDATA[skaiciukas: 3
+]]></system-out>
+  </testcase>
+  <testcase name="registerSingleRepresentativeTest" classname="it.akademija.admin.RepresentativeTest" time="4.359">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.RepresentativeTest.registerSingleRepresentativeTest(RepresentativeTest.java:27)
+</failure>
+  </testcase>
 </testsuite>

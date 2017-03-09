@@ -1,22 +1,32 @@
 package it.akademija.admin;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import it.akademija.voting.VotingSystem;
 
 public class PartyTest extends VotingSystem{
 	
 	private int numberOfTimesTestWasRan = 0;
 
-	
+	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@BeforeClass
+	public void setUp(String loginLink, String usernameAdmin, String password){
+	//	driver.get(adminLink);
+		pageParty = new PartyPage(driver);
+		pageLogin.login(usernameAdmin, password);
+	}
 	
 	/**
 	 * TC08 and TC09
 	 */
 	@Parameters({"partyName", "partyNumber", "partyCsvFile"})
-	@Test (priority = 18, invocationCount = 2, enabled = false)
+	@Test (priority = 18, invocationCount = 2, enabled = true)
 	public void registerPartyTest(String partyName, String partyNumber,
 			String partyCsvFile){
+		pageParty = new PartyPage(driver);
 		pageParty.registerParty(partyName, partyNumber, partyCsvFile, "");
 		if (numberOfTimesTestWasRan == 0) {
 			Assert.assertTrue(pageParty.alert.getText().contains(partyName + " sukurta"));
@@ -38,7 +48,7 @@ public class PartyTest extends VotingSystem{
 	}
 	
 	@Parameters({"partyName2", "partyNumber2", "partyFile"})
-	@Test (priority = 17, enabled = false)
+	@Test (priority = 17, enabled = true)
 	public void registerPartyWithOtherFileTest(String partyName2, String partyNumber2,
 			String partyFile){
 		pageParty.registerParty(partyName2, partyNumber2, partyFile, "");
@@ -49,7 +59,7 @@ public class PartyTest extends VotingSystem{
 	 * TC43
 	 */
 	@Parameters({"partyName2", "partyNumber2", "noFile"})
-	@Test (priority = 17, enabled = false)
+	@Test (priority = 17, enabled = true)
 	public void registerPartyWithoutFileTest(String partyName2, String partyNumber2,
 			String noFile){
 		pageParty.registerParty(partyName2, partyNumber2, noFile, "");
@@ -57,24 +67,24 @@ public class PartyTest extends VotingSystem{
 	}
 	
 	@Parameters({"partyName", "newPartyName", "newPartyNumber"})
-	@Test(priority = 19, enabled = false)
+	@Test(priority = 19, enabled = true)
 	public void editPartyTest(String partyName, String newPartyName, String newPartyNumber){
 		pageParty.editParty(partyName, newPartyName, newPartyNumber, "");
 		Assert.assertTrue(pageParty.alert.getText().contains("Partija " + newPartyName + " atnaujinta"));
 	}
 
 	@Parameters({"newPartyName"})
-	@Test(priority = 21, enabled = false)
+	@Test(priority = 20, enabled = true)
 	public void deletePartyTest(String newPartyName){
 		pageParty.deleteParty(newPartyName);
-		Assert.assertTrue(pageParty.alert.getText().contains(newPartyName + " ištrinta"));
+		
 	}
 	
 	@Parameters({"partyName2"})
-	@Test(priority = 20, enabled = true)
+	@Test(priority = 21, enabled = true)
 	public void deleteCandidatesTest(String partyName2){
 		pageParty.deleteCandidates(partyName2);
-		Assert.assertTrue(pageParty.alert.getText().contains("Partija " + partyName2 + " atnaujinta"));
+	//	Assert.assertTrue(pageParty.alert.getText().contains("Partija " + partyName2 + " atnaujinta"));
 	}
 	
 }

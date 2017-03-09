@@ -1,9 +1,22 @@
 package it.akademija.admin;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import it.akademija.voting.VotingSystem;
+
 public class CandidatesTest extends VotingSystem {
+	
+	private CandidatesPage pageCandidates;
+	
+	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@BeforeClass
+	public void setUp(String loginLink, String usernameAdmin, String password){
+	//	driver.get(adminLink);
+		pageCandidates = new CandidatesPage(driver);
+		pageLogin.login(usernameAdmin, password);
+	}
 	
 	@Parameters({"candidateNumber", "candidateName", "candidateSurname", "candidateBirthDate", "newCandidateName", "newCandidateSurname", "newCandidateBirthDate", "newCandidateInfo", "newCandidateNumber"})
 	@Test(priority = 23)

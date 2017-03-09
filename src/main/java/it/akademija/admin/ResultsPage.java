@@ -22,6 +22,9 @@ public class ResultsPage {
 	@FindBy(xpath = "//*[@id='page-wrapper']//li[2]/a")
 	WebElement buttonSingleMember;
 	
+	@FindBy(xpath = "//*[@id='page-wrapper']//li[3]/a")
+	WebElement buttonMultiMember;
+	
 	@FindBy(id = "result-refresh")
 	WebElement buttonRefresh;
 	
@@ -31,8 +34,20 @@ public class ResultsPage {
 	@FindBy(xpath = "//*[@id='confirmationModalundefined']/div/div/div[2]/div/button[1]")
 	WebElement buttonDeleteConfirmation;
 	
+	@FindBy(xpath = "//div[@id = 'results1']//*[contains(@id, 'confirm-button')]")
+	WebElement buttonConfirmSingleMember;
+	
+	@FindBy(xpath = "//div[@id = 'results2']//*[contains(@id, 'confirm-button')]")
+	WebElement buttonConfirmMultiMember;
+	
+	@FindBy(xpath = "//div[@id = 'results1']//*[@id='dataTables-example']//td[1]")
+	WebElement textDistrictName;
+	
 	@FindBy(id = "alert-danger-fixed")
 	WebElement alertMessage;
+	
+	@FindBy(id = "alert-success-fixed")
+	public WebElement successMessage;
 	
 	
 	public ResultsPage(WebDriver driver) {
@@ -54,7 +69,29 @@ public class ResultsPage {
 		buttonDeleteConfirmation.click();
 		System.out.println("po paspaudima");
 		utilities.waitToLoad("//*[@id = 'alert-danger-fixed']");
-		Assert.assertTrue(alertMessage.getText().equals("AguonÅ³ balsai atmesti."));
+		Assert.assertTrue(alertMessage.getText().equals("Aguonø balsai atmesti."));
 	}
+
+	public void confirmResultsInSingleMember() {
+		menuResults.click();
+		buttonSingleMember.click();
+		buttonRefresh.click();
+		utilities.waitToLoad("//div[@id = 'results1']//*[contains(@id, 'confirm-button')]").click();
+	//	buttonConfirmSingleMember.click();
+		utilities.waitToLoad("//*[@id = 'alert-success-fixed']");
+	}
+
+	public void confirmResultsInMultiMember() {
+		buttonMultiMember.click();
+		buttonRefresh.click();
+		utilities.waitToLoad("//div[@id = 'results2']//*[contains(@id, 'confirm-button')]").click();
+	//	buttonConfirmMultiMember.click();
+		utilities.waitToLoad("//*[@id = 'alert-success-fixed']");
+	}
+	
+	public String getDistrictName(){
+		return textDistrictName.getText();
+	}
+
 	
 }

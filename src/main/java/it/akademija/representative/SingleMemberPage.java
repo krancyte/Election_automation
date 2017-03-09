@@ -31,7 +31,7 @@ public class SingleMemberPage {
 	WebElement buttonSubmit;
 
 	@FindBy(className = "alert")
-	WebElement alertMessage;
+	public WebElement alertMessage;
 
 	public SingleMemberPage(WebDriver driver) {
 		this.driver = driver;

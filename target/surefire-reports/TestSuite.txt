@@ -1,4 +1,79 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.28 sec - in TestSuite
+Tests run: 15, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 133.418 sec <<< FAILURE! - in TestSuite
+registerMultipleDistrictsToDifferentCountiesTest(it.akademija.admin.DistrictTest)  Time elapsed: 3 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+	at it.akademija.admin.DistrictTest.registerMultipleDistrictsToDifferentCountiesTest(DistrictTest.java:46)
+
+registerMultipleDistrictsToOneCountyTest(it.akademija.admin.DistrictTest)  Time elapsed: 2.515 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictPage.registerMultipleDistricts(DistrictPage.java:122)
+	at it.akademija.admin.DistrictTest.registerMultipleDistrictsToOneCountyTest(DistrictTest.java:40)
+
+editDistrictTest(it.akademija.admin.DistrictTest)  Time elapsed: 34.407 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[83]/td[1]"}
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-O933604', ip: '192.168.30.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ac9080b-992c-4308-b0a5-ebb5a996636d
+*** Element info: {Using=xpath, value=//tbody/tr[83]/td[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at utilities.Utilities.findElementForDeletingAndEditing(Utilities.java:55)
+	at it.akademija.admin.DistrictPage.editDistrict(DistrictPage.java:130)
+	at it.akademija.admin.DistrictTest.editDistrictTest(DistrictTest.java:52)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//tbody/tr[83]/td[1]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-O933604', ip: '192.168.30.59', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/User/AppData/Local/Temp/anonymous490372942207265888webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+
+deleteDistrictTest(it.akademija.admin.DistrictTest)  Time elapsed: 5.11 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.DistrictTest.deleteDistrictTest(DistrictTest.java:60)
+
+registerMultipleRepresentativesTest(it.akademija.admin.RepresentativeTest)  Time elapsed: 8.276 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.RepresentativePage.registerMultipleDistrictRepresentative(RepresentativePage.java:89)
+	at it.akademija.admin.RepresentativeTest.registerMultipleRepresentativesTest(RepresentativeTest.java:33)
+
+registerSingleRepresentativeTest(it.akademija.admin.RepresentativeTest)  Time elapsed: 4.359 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at it.akademija.admin.RepresentativeTest.registerSingleRepresentativeTest(RepresentativeTest.java:27)
+

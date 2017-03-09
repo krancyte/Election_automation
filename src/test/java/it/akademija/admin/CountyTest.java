@@ -1,17 +1,41 @@
 package it.akademija.admin;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
+
+import it.akademija.voting.VotingSystem;
+
 import java.io.File;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+@Test(groups = "admin-actions")
 public class CountyTest extends VotingSystem{
 
 	private int numberOfTimesTestWasRan = 0;
-
+	
+	
+	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@BeforeClass
+	public void setUp(String loginLink, String usernameAdmin, String password){
+	//	driver.get(adminLink);
+		pageCounty = new CountyPage(driver);
+		pageLogin.login(usernameAdmin, password);
+	}
+	
+//	@Parameters({ "countyFile", "newCountyName" })
+//	@AfterTest(alwaysRun = true)
+//	public void deleteAllRegisteredCounties(String countyFile, String newCountyName) throws IOException{
+//		pageCounty.deleteMultipleCounties(countyFile);
+//		pageCounty.deleteCounty(newCountyName);
+//		driver.close();
+//	}
+	
 	@Parameters({ "countyFile" })
 	@Test(priority = 3, enabled = true)
 	public void registerMultipleCountiesTest(String countyFile) throws IOException {
@@ -33,16 +57,16 @@ public class CountyTest extends VotingSystem{
 		numberOfTimesTestWasRan++;
 	}
 
-	@Parameters({ "differentCounty" })
+	@Parameters({ "countyToDelete" })
 	@Test(priority = 5, enabled = true)
-	public void deleteCountyTest(String differentCounty) {
-		pageCounty.deleteCounty(differentCounty);
+	public void deleteCountyTest(String countyToDelete) {
+		pageCounty.deleteCounty(countyToDelete);
 		Assert.assertTrue(
-				pageCounty.alert.getText().contains("Apygarda " + differentCounty + " ištrinta"));
+				pageCounty.alert.getText().contains("Apygarda " + countyToDelete + " ištrinta"));
 	}
 
 	@Parameters({ "countyName", "newCountyName" })
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4, enabled = true, groups = {"county-name"})
 	public void editCountyTest(String countyName, String newCountyName) {
 		pageCounty.editCounty(countyName, newCountyName);
 		Assert.assertTrue(

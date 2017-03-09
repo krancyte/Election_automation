@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\User\workspace\Projektas\Election_automation\testng.xml</span>
+                    <span>C:\Users\User\workspace\Projektas\Election_automation\testngSmoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">11 methods, 2 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="confirmingMultiMemberResults">confirmingMultiMemberResults</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="confirmingSingleMemberResults(http://localhost:9090/#/login/, admin, admin)">confirmingSingleMemberResults(http://localhost:9090/#/login/, admin, admin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,32 +121,47 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="addCandidatesListTest(Akmenėss, data-county.csv)">addCandidatesListTest(Akmenėss, data-county.csv)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="addCandidatesList(data-county-valid.csv)">addCandidatesList(data-county-valid.csv)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="deleteCountyTest(Senamiesčioo)">deleteCountyTest(Senamiesčioo)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="deletePartyTest(Konservatoriai, http://localhost:9090/#/login/, admin, admin)">deletePartyTest(Konservatoriai, http://localhost:9090/#/login/, admin, admin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="editCountyTest(Akmenes, Akmenėss)">editCountyTest(Akmenes, Akmenėss)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="fillingMultiMemberResults">fillingMultiMemberResults</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="registerCountyTest(Akmenes)">registerCountyTest(Akmenes)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="fillingSingleMemberResults(http://localhost:9090/#/login/)">fillingSingleMemberResults(http://localhost:9090/#/login/)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="registerCountyTest(Akmenes)">registerCountyTest(Akmenes)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="loginAdministrator(admin, admin)">loginAdministrator(admin, admin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.admin.CountyTest" hash-for-method="registerMultipleCountiesTest(src/test/resources/county-input.txt)">registerMultipleCountiesTest(src/test/resources/county-input.txt)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="registerCounty(Kniaudiškiečių, src/test/resources/countyRandom.txt)">registerCounty(Kniaudiškiečių, src/test/resources/countyRandom.txt)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="registerDistrict(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500)">registerDistrict(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="registerParty(Konservatoriai, 99, konservatoriai.csv)">registerParty(Konservatoriai, 99, konservatoriai.csv)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="it.akademija.smoke.SmokeTest" hash-for-method="registerRepresentative(Dovilė, Pankavilė)">registerRepresentative(Dovilė, Pankavilė)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -142,58 +176,153 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">it.akademija.admin.CountyTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">it.akademija.smoke.SmokeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addCandidatesListTest(Akmenėss, data-county.csv)">
-                  </a> <!-- addCandidatesListTest(Akmenėss, data-county.csv) -->
-                  <span class="method-name">addCandidatesListTest</span>
-                  <span class="parameters">(Akmenėss, data-county.csv)</span>
+                  <a name="confirmingMultiMemberResults">
+                  </a> <!-- confirmingMultiMemberResults -->
+                  <span class="method-name">confirmingMultiMemberResults</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12.22 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.30.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir8124_2779}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: d37c951492ae93760f8979ba92d4d076
+*** Element info: {Using=xpath, value=//*[@id = &apos;alert-success-fixed&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at utilities.Utilities.waitToLoad(Utilities.java:53)
+	at it.akademija.admin.ResultsPage.confirmResultsInMultiMember(ResultsPage.java:89)
+	at it.akademija.smoke.SmokeTest.confirmingMultiMemberResults(SmokeTest.java:143)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteCountyTest(Senamiesčioo)">
-                  </a> <!-- deleteCountyTest(Senamiesčioo) -->
-                  <span class="method-name">deleteCountyTest</span>
-                  <span class="parameters">(Senamiesčioo)</span>
+                  <a name="confirmingSingleMemberResults(http://localhost:9090/#/login/, admin, admin)">
+                  </a> <!-- confirmingSingleMemberResults(http://localhost:9090/#/login/, admin, admin) -->
+                  <span class="method-name">confirmingSingleMemberResults</span>
+                  <span class="parameters">(http://localhost:9090/#/login/, admin, admin)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a href=&quot;#/admin/results&quot; id=&quot;results-button&quot;&gt;...&lt;/a&gt; is not clickable at point (126, 325). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 130 milliseconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-O933604&apos;, ip: &apos;192.168.30.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_73&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\User\AppData\Local\Temp\scoped_dir8124_2779}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: d37c951492ae93760f8979ba92d4d076
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at it.akademija.admin.ResultsPage.confirmResultsInSingleMember(ResultsPage.java:76)
+	at it.akademija.smoke.SmokeTest.confirmingSingleMemberResults(SmokeTest.java:133)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">it.akademija.smoke.SmokeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCandidatesList(data-county-valid.csv)">
+                  </a> <!-- addCandidatesList(data-county-valid.csv) -->
+                  <span class="method-name">addCandidatesList</span>
+                  <span class="parameters">(data-county-valid.csv)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="editCountyTest(Akmenes, Akmenėss)">
-                  </a> <!-- editCountyTest(Akmenes, Akmenėss) -->
-                  <span class="method-name">editCountyTest</span>
-                  <span class="parameters">(Akmenes, Akmenėss)</span>
+                  <a name="deletePartyTest(Konservatoriai, http://localhost:9090/#/login/, admin, admin)">
+                  </a> <!-- deletePartyTest(Konservatoriai, http://localhost:9090/#/login/, admin, admin) -->
+                  <span class="method-name">deletePartyTest</span>
+                  <span class="parameters">(Konservatoriai, http://localhost:9090/#/login/, admin, admin)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="registerCountyTest(Akmenes)">
-                  </a> <!-- registerCountyTest(Akmenes) -->
-                  <span class="method-name">registerCountyTest</span>
-                  <span class="parameters">(Akmenes)</span>
+                  <a name="fillingMultiMemberResults">
+                  </a> <!-- fillingMultiMemberResults -->
+                  <span class="method-name">fillingMultiMemberResults</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="registerCountyTest(Akmenes)">
-                  </a> <!-- registerCountyTest(Akmenes) -->
-                  <span class="method-name">registerCountyTest</span>
-                  <span class="parameters">(Akmenes)</span>
+                  <a name="fillingSingleMemberResults(http://localhost:9090/#/login/)">
+                  </a> <!-- fillingSingleMemberResults(http://localhost:9090/#/login/) -->
+                  <span class="method-name">fillingSingleMemberResults</span>
+                  <span class="parameters">(http://localhost:9090/#/login/)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="registerMultipleCountiesTest(src/test/resources/county-input.txt)">
-                  </a> <!-- registerMultipleCountiesTest(src/test/resources/county-input.txt) -->
-                  <span class="method-name">registerMultipleCountiesTest</span>
-                  <span class="parameters">(src/test/resources/county-input.txt)</span>
+                  <a name="loginAdministrator(admin, admin)">
+                  </a> <!-- loginAdministrator(admin, admin) -->
+                  <span class="method-name">loginAdministrator</span>
+                  <span class="parameters">(admin, admin)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerCounty(Kniaudiškiečių, src/test/resources/countyRandom.txt)">
+                  </a> <!-- registerCounty(Kniaudiškiečių, src/test/resources/countyRandom.txt) -->
+                  <span class="method-name">registerCounty</span>
+                  <span class="parameters">(Kniaudiškiečių, src/test/resources/countyRandom.txt)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerDistrict(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500)">
+                  </a> <!-- registerDistrict(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500) -->
+                  <span class="method-name">registerDistrict</span>
+                  <span class="parameters">(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerParty(Konservatoriai, 99, konservatoriai.csv)">
+                  </a> <!-- registerParty(Konservatoriai, 99, konservatoriai.csv) -->
+                  <span class="method-name">registerParty</span>
+                  <span class="parameters">(Konservatoriai, 99, konservatoriai.csv)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerRepresentative(Dovilė, Pankavilė)">
+                  </a> <!-- registerRepresentative(Dovilė, Pankavilė) -->
+                  <span class="method-name">registerRepresentative</span>
+                  <span class="parameters">(Dovilė, Pankavilė)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,65 +330,39 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\workspace\Projektas\Election_automation\testng.xml</span>
+            <span class="header-content">C:\Users\User\workspace\Projektas\Election_automation\testngSmoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;wrongPassword&quot; value=&quot;1234&quot;/&gt;
-  &lt;parameter name=&quot;countyFile&quot; value=&quot;src/test/resources/county-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;variousDistrictsVotersFile&quot; value=&quot;src/test/resources/variousDistrictsVoters-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;representativeLink&quot; value=&quot;http://localhost:9090/#/representative/&quot;/&gt;
-  &lt;parameter name=&quot;partyNumber2&quot; value=&quot;442&quot;/&gt;
-  &lt;parameter name=&quot;representativeSurname&quot; value=&quot;Stolytė&quot;/&gt;
-  &lt;parameter name=&quot;partyFile&quot; value=&quot;data-party-not-csv.txt&quot;/&gt;
-  &lt;parameter name=&quot;candidateBirthDate&quot; value=&quot;1966-06-06&quot;/&gt;
-  &lt;parameter name=&quot;link&quot; value=&quot;http://localhost:9090&quot;/&gt;
-  &lt;parameter name=&quot;districtAddress&quot; value=&quot;Fabijoniskiu g. 15, Vilnius&quot;/&gt;
-  &lt;parameter name=&quot;countyName2&quot; value=&quot;Dainavoss&quot;/&gt;
-  &lt;parameter name=&quot;districtAddressFile&quot; value=&quot;src/test/resources/districtAddress-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;districtVotersFile&quot; value=&quot;src/test/resources/districtVoters-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;representativeSurnamesFile&quot; value=&quot;src/test/resources/representativeSurnames-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;password&quot; value=&quot;admin&quot;/&gt;
-  &lt;parameter name=&quot;districtVoter&quot; value=&quot;2416&quot;/&gt;
-  &lt;parameter name=&quot;partyName&quot; value=&quot;Zuokuciooo partija&quot;/&gt;
-  &lt;parameter name=&quot;partyName2&quot; value=&quot;Bruzgesss partija&quot;/&gt;
-  &lt;parameter name=&quot;newCountyName&quot; value=&quot;Akmenėss&quot;/&gt;
-  &lt;parameter name=&quot;newCandidateNumber&quot; value=&quot;37&quot;/&gt;
-  &lt;parameter name=&quot;newCandidateBirthDate&quot; value=&quot;1959-06-15&quot;/&gt;
-  &lt;parameter name=&quot;districtNameToDelete&quot; value=&quot;Rugių&quot;/&gt;
-  &lt;parameter name=&quot;countyName&quot; value=&quot;Akmenes&quot;/&gt;
-  &lt;parameter name=&quot;newDistrictVoter&quot; value=&quot;2000&quot;/&gt;
-  &lt;parameter name=&quot;newCandidateInfo&quot; value=&quot;Socialdemokratas&quot;/&gt;
-  &lt;parameter name=&quot;adminLink&quot; value=&quot;http://localhost:9090/#/admin/&quot;/&gt;
   &lt;parameter name=&quot;newDistrictName&quot; value=&quot;Jovarų&quot;/&gt;
-  &lt;parameter name=&quot;newPartyNumber&quot; value=&quot;66&quot;/&gt;
+  &lt;parameter name=&quot;loginLink&quot; value=&quot;http://localhost:9090/#/login/&quot;/&gt;
   &lt;parameter name=&quot;usernameAdmin&quot; value=&quot;admin&quot;/&gt;
-  &lt;parameter name=&quot;districtName&quot; value=&quot;Fabijoniskiu&quot;/&gt;
+  &lt;parameter name=&quot;districtRandom&quot; value=&quot;src/test/resources/districtRandom.txt&quot;/&gt;
+  &lt;parameter name=&quot;districtName&quot; value=&quot;Žvaigždžių&quot;/&gt;
   &lt;parameter name=&quot;newDistrictAddress&quot; value=&quot;S. Stanevičiaus g. 100, Vilnius&quot;/&gt;
-  &lt;parameter name=&quot;representativeNamesFile&quot; value=&quot;src/test/resources/representativeNames-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;candidatesList&quot; value=&quot;data-county.csv&quot;/&gt;
-  &lt;parameter name=&quot;noFile&quot; value=&quot;&quot;/&gt;
-  &lt;parameter name=&quot;districtFile&quot; value=&quot;src/test/resources/district-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;variousDistrictsFile&quot; value=&quot;src/test/resources/variousDistricts-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;newCandidateSurname&quot; value=&quot;Kurinskis&quot;/&gt;
-  &lt;parameter name=&quot;variousDistrictsAddressFile&quot; value=&quot;src/test/resources/variousDistrictsAddress-input.txt&quot;/&gt;
-  &lt;parameter name=&quot;candidateName&quot; value=&quot;Algirdas&quot;/&gt;
-  &lt;parameter name=&quot;candidateSurname&quot; value=&quot;Paleckis&quot;/&gt;
+  &lt;parameter name=&quot;representativeSurname&quot; value=&quot;Pankavilė&quot;/&gt;
+  &lt;parameter name=&quot;link&quot; value=&quot;http://localhost:9090&quot;/&gt;
+  &lt;parameter name=&quot;districtAddress&quot; value=&quot;Žvaigždžių g. 33&quot;/&gt;
+  &lt;parameter name=&quot;candidatesList&quot; value=&quot;data-county-valid.csv&quot;/&gt;
+  &lt;parameter name=&quot;countyRandom&quot; value=&quot;src/test/resources/countyRandom.txt&quot;/&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;admin&quot;/&gt;
+  &lt;parameter name=&quot;districtVoter&quot; value=&quot;1500&quot;/&gt;
   &lt;parameter name=&quot;districtNameToEdit&quot; value=&quot;Jovaroo&quot;/&gt;
   &lt;parameter name=&quot;differentCounty&quot; value=&quot;Senamiesčioo&quot;/&gt;
-  &lt;parameter name=&quot;candidateNumber&quot; value=&quot;88&quot;/&gt;
-  &lt;parameter name=&quot;partyCsvFile&quot; value=&quot;data-party-3.csv&quot;/&gt;
-  &lt;parameter name=&quot;partyNumber&quot; value=&quot;56&quot;/&gt;
-  &lt;parameter name=&quot;representativeName&quot; value=&quot;Birutė&quot;/&gt;
-  &lt;parameter name=&quot;newCandidateName&quot; value=&quot;Algis&quot;/&gt;
-  &lt;parameter name=&quot;newPartyName&quot; value=&quot;Zuokucio partija&quot;/&gt;
+  &lt;parameter name=&quot;partyName&quot; value=&quot;Konservatoriai&quot;/&gt;
+  &lt;parameter name=&quot;partyCsvFile&quot; value=&quot;konservatoriai.csv&quot;/&gt;
+  &lt;parameter name=&quot;partyNumber&quot; value=&quot;99&quot;/&gt;
+  &lt;parameter name=&quot;representativeName&quot; value=&quot;Dovilė&quot;/&gt;
+  &lt;parameter name=&quot;districtNameToDelete&quot; value=&quot;Rugių&quot;/&gt;
+  &lt;parameter name=&quot;countyName&quot; value=&quot;Kniaudiškiečių&quot;/&gt;
+  &lt;parameter name=&quot;newDistrictVoter&quot; value=&quot;2000&quot;/&gt;
   &lt;test name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;it.akademija.admin.CountyTest&quot;/&gt;
+      &lt;class name=&quot;it.akademija.smoke.SmokeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -299,36 +402,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'registerMultipleCountiesTest')
-data.setCell(0, 2, 'it.akademija.admin.CountyTest')
-data.setCell(0, 3, 5570);
+data.setCell(0, 1, 'confirmingMultiMemberResults')
+data.setCell(0, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(0, 3, 49413);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteCountyTest')
-data.setCell(1, 2, 'it.akademija.admin.CountyTest')
-data.setCell(1, 3, 4338);
+data.setCell(1, 1, 'addCandidatesList')
+data.setCell(1, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(1, 3, 7203);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'registerCountyTest')
-data.setCell(2, 2, 'it.akademija.admin.CountyTest')
-data.setCell(2, 3, 4270);
+data.setCell(2, 1, 'registerRepresentative')
+data.setCell(2, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(2, 3, 5973);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addCandidatesListTest')
-data.setCell(3, 2, 'it.akademija.admin.CountyTest')
-data.setCell(3, 3, 2305);
+data.setCell(3, 1, 'deletePartyTest')
+data.setCell(3, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(3, 3, 3457);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'editCountyTest')
-data.setCell(4, 2, 'it.akademija.admin.CountyTest')
-data.setCell(4, 3, 1521);
+data.setCell(4, 1, 'loginAdministrator')
+data.setCell(4, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(4, 3, 3133);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'registerCountyTest')
-data.setCell(5, 2, 'it.akademija.admin.CountyTest')
-data.setCell(5, 3, 637);
+data.setCell(5, 1, 'fillingMultiMemberResults')
+data.setCell(5, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(5, 3, 2608);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'fillingSingleMemberResults')
+data.setCell(6, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(6, 3, 2352);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'registerDistrict')
+data.setCell(7, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(7, 3, 2151);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'registerCounty')
+data.setCell(8, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(8, 3, 1870);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'registerParty')
+data.setCell(9, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(9, 3, 976);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'confirmingSingleMemberResults')
+data.setCell(10, 2, 'it.akademija.smoke.SmokeTest')
+data.setCell(10, 3, 184);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -354,38 +477,66 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">it.akademija.admin.CountyTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">it.akademija.smoke.SmokeTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">settingUp(http://localhost:9090, chrome, http://localhost:9090/#/admin/, http://localhost:9090/#/representativ...)</span>
+                <span class="method-name">settingUp(chrome, admin, admin, http://localhost:9090/#/login/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(http://localhost:9090/#/login/)</span>
+                <span class="method-start">6412 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">registerCountyTest(Akmenes)</span>
-                <span class="method-start">6356 ms</span>
+                <span class="method-name">loginAdministrator(admin, admin)</span>
+                <span class="method-start">6474 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">registerCountyTest(Akmenes)</span>
-                <span class="method-start">10628 ms</span>
+                <span class="method-name">registerCounty(Kniaudiškiečių, src/test/resources/countyRandom.txt)</span>
+                <span class="method-start">9613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">registerMultipleCountiesTest(src/test/resources/county-input.txt)</span>
-                <span class="method-start">11270 ms</span>
+                <span class="method-name">registerDistrict(src/test/resources/districtRandom.txt, Žvaigždžių g. 33, 1500)</span>
+                <span class="method-start">11486 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">editCountyTest(Akmenes, Akmenėss)</span>
-                <span class="method-start">16846 ms</span>
+                <span class="method-name">registerRepresentative(Dovilė, Pankavilė)</span>
+                <span class="method-start">13640 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">deleteCountyTest(Senamiesčioo)</span>
-                <span class="method-start">18369 ms</span>
+                <span class="method-name">registerParty(Konservatoriai, 99, konservatoriai.csv)</span>
+                <span class="method-start">19613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">addCandidatesListTest(Akmenėss, data-county.csv)</span>
-                <span class="method-start">22710 ms</span>
+                <span class="method-name">addCandidatesList(data-county-valid.csv)</span>
+                <span class="method-start">20593 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillingSingleMemberResults(http://localhost:9090/#/login/)</span>
+                <span class="method-start">27796 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillingMultiMemberResults</span>
+                <span class="method-start">30148 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletePartyTest(Konservatoriai, http://localhost:9090/#/login/, admin, admin)</span>
+                <span class="method-start">32758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">confirmingSingleMemberResults(http://localhost:9090/#/login/, admin, admin)</span>
+                <span class="method-start">36215 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">confirmingMultiMemberResults</span>
+                <span class="method-start">36412 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endingTestActivities</span>
-                <span class="method-start">25017 ms</span>
+                <span class="method-start">85828 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

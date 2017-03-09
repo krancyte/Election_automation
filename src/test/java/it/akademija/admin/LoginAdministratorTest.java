@@ -4,8 +4,11 @@ import org.testng.annotations.Test;
 
 import it.akademija.representative.MultiMemberPage;
 import it.akademija.representative.SingleMemberPage;
+import it.akademija.voting.VotingSystem;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -18,15 +21,27 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 
+@Test(groups = "admin-login")
 public class LoginAdministratorTest extends VotingSystem{
-
 	
+	@Parameters({"adminLink"})
+	@BeforeClass
+	public void setUp(String adminLink){
+		
+
+	}
+	
+//	@AfterTest
+//	public void endingTestActivities() {	
+//		logoutAdministrator();
+//		driver.close();
+//	}
 
 	/**
 	 * TC02
 	 */
 	@Parameters({ "usernameAdmin", "wrongPassword" })
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true)
 	public void wrongAdministratorLogin(String usernameAdmin, String password) {
 		pageLogin.login(usernameAdmin, password);
 		System.out.println("prisijungimo vardas arba");
@@ -48,9 +63,9 @@ public class LoginAdministratorTest extends VotingSystem{
 	/**
 	 * TC03
 	 */
-	@Test(priority = 50, enabled = false)
+	@Test(priority = 100, enabled = false)
 	public void logoutAdministrator() {
-		pageLogin.clickToLogout();
-		Assert.assertTrue(pageLogin.textPradinis.isDisplayed());
+		pageLogin.logout();
+		
 	}
 }

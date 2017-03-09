@@ -37,7 +37,10 @@ public class MultiMemberPage {
 	WebElement buttonSubmit;
 
 	@FindBy(className = "alert")
-	WebElement alertMessage;
+	public WebElement alertMessage;
+	
+	@FindBy(partialLinkText = "Atsijungti")
+	public WebElement buttonLogoutRepresentative;
 
 	public MultiMemberPage(WebDriver driver) {
 		this.driver = driver;
