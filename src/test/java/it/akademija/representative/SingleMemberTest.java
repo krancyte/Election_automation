@@ -2,27 +2,22 @@ package it.akademija.representative;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import it.akademija.admin.RepresentativePage;
 import it.akademija.voting.VotingSystem;
 
 public class SingleMemberTest extends VotingSystem{
 
-	
-	
-	@Parameters({"loginLink", "usernameAdmin", "password"})
 	@BeforeClass
-	public void setUp(String loginLink, String usernameAdmin, String password){
-	//	driver.get(adminLink);
+	public void setUp(){
 		pageSingleMember = new SingleMemberPage(driver);
-		pageLogin.login(usernameAdmin, password);
+		pageRepresentative = new RepresentativePage(driver);
+		pageLogin.login(pageRepresentative.getRepresentativeUsername(0), pageRepresentative.getRepresentativePassword(0));
 	}
 	
 	@Test(priority = 27)
 	public void fillingSingleMemberResults() {
 		pageSingleMember.fillOutResultRows();
-		Assert.assertTrue(pageSingleMember.alertMessage.getText().contains("JÅ«sÅ³ apylinkÄ—s balsai uÅ¾registruoti"));
+		Assert.assertTrue(pageSingleMember.alertMessage.getText().contains("Jûsø apylinkës balsai uþregistruoti"));
 	}
 }

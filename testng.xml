@@ -10,6 +10,7 @@
 	
 	<parameter name="countyFile" value="src/test/resources/county-input.txt" />
 	<parameter name="countyName" value="Akmeninės" />
+	<parameter name="countyNameForVoting" value="Kainavininkų" />
 	<parameter name="newCountyName" value="Akmeninikų" />
 	<parameter name="countyToDelete" value="Senamiestėnų" />
 	<parameter name="candidatesList" value="data-county.csv" />
@@ -23,6 +24,7 @@
 	<parameter name="newDistrictName" value="Jovarikantiškių" />
 	<parameter name="newDistrictAddress" value="S. Stanevičiaus g. 100, Vilnius" />
 	<parameter name="newDistrictVoter" value="2000" />
+	<parameter name="districtForVoting" value="Papilėniškių" />
 	
 	<parameter name="districtFile" value="src/test/resources/district-input.txt" />
 	<parameter name="districtAddressFile"
@@ -55,41 +57,15 @@
 	<parameter name="candidateName" value="Algirdas" />
 	<parameter name="candidateSurname" value="Paleckis" />
 	<parameter name="candidateBirthDate" value="1966-06-06" />
-	<parameter name="candidateNumber" value="88" />
+	<parameter name="candidateNumber" value="37" />
 	<parameter name="newCandidateName" value="Algis" />
 	<parameter name="newCandidateSurname" value="Kurinskis" />
 	<parameter name="newCandidateBirthDate" value="1959-06-15" />
 	<parameter name="newCandidateInfo" value="Socialdemokratas" />
-	<parameter name="newCandidateNumber" value="37" />
+	<parameter name="newCandidateNumber" value="88" />
 	<test name="Suite">
-		
 		<parameter name="browser" value="chrome" />
-		<!--
-		<groups>
-    		<dependencies>
-     			<group name="admin-actions" depends-on="admin-login" />
-
-    		</dependencies>
-  		</groups>
-  			-->
-		
 		<classes>
-			
-			
-			<class name="it.akademija.admin.CountyTest" />
-			<class name="it.akademija.admin.DistrictTest" />
-			<class name="it.akademija.admin.RepresentativeTest" />
-			<class name="it.akademija.admin.PartyTest" />
-			<class name="it.akademija.admin.CandidatesTest" />
-			<class name="it.akademija.voting.DeletionOfAllData" />
-		</classes>
-		
-	</test>
-	<!--
-	<test name="FirefoxTest">
-		<parameter name="browser" value="Firefox" />
-		<classes>
-			<class name="it.akademija.admin.LoginAdministratorTest" />
 			<class name="it.akademija.admin.CountyTest" />
 			<class name="it.akademija.admin.DistrictTest" />
 			<class name="it.akademija.admin.RepresentativeTest" />
@@ -99,23 +75,7 @@
 			<class name="it.akademija.representative.SingleMemberTest" />
 			<class name="it.akademija.representative.MultiMemberTest" />
 			<class name="it.akademija.admin.ResultsTest" />
-
+			<class name="it.akademija.voting.DeletionOfAllData" />
 		</classes>
 	</test>
-	
-	<test name="OperaTest">
-		<parameter name="browser" value="Opera" />
-		<classes>
-			<class name="it.akademija.admin.TestLoginAdministrator" />
-		</classes>
-	</test>
-	
-	<test name="IETest">
-		<parameter name="browser" value="IE" />
-		<classes>
-			<class name="it.akademija.admin.TestLoginAdministrator" />
-		</classes>
-	</test>
- 	-->
-
 </suite>

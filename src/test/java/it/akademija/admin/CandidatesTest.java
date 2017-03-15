@@ -3,17 +3,15 @@ package it.akademija.admin;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import it.akademija.voting.VotingSystem;
 
 public class CandidatesTest extends VotingSystem {
 	
 	private CandidatesPage pageCandidates;
 	
-	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@Parameters({ "usernameAdmin", "password"})
 	@BeforeClass
-	public void setUp(String loginLink, String usernameAdmin, String password){
-	//	driver.get(adminLink);
+	public void setUp(String usernameAdmin, String password){
 		pageCandidates = new CandidatesPage(driver);
 		pageLogin.login(usernameAdmin, password);
 	}

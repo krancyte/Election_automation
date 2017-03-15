@@ -2,10 +2,8 @@ package utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +26,6 @@ public class Utilities {
 	private int randomInt;
 	private WebDriverWait wait;
 	private WebElement element;
-	private boolean isElementFound;
 	private List<String> list;
 	private Random rand = new Random();
 
@@ -38,6 +35,7 @@ public class Utilities {
 	public Utilities(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+
 	}
 
 	public void waitForJavascript() {
@@ -55,21 +53,14 @@ public class Utilities {
 	}
 
 	public int findElementForDeletingAndEditing(WebElement menu, String name, String elementForSearching) {
-		System.out.println("pateko i find element metoda");
-	//	waitToLoad("//*[@id='register-button']");
-	//	waitForJavascript();
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		menu.click();
-		System.out.println("paspaude menu mygtuka");
-		// waitForJavascript();
 		waitToLoad("//*[@id='register-button']");
 		numberOfRows = rows.size();
-		System.out.println("eiluciu yra: " + numberOfRows);
 		for (int i = 1; i <= numberOfRows; i++) {
 			if (!elementForSearching.equals("party")) {
 				searchingName = driver.findElement(By.xpath("//tbody/tr[" + i + "]/td[1]")).getText();
@@ -77,18 +68,21 @@ public class Utilities {
 				searchingName = driver.findElement(By.xpath("//tbody/tr[" + i + "]/td[2]")).getText();
 			}
 			if (searchingName.equals(name)) {
-				System.out.println("skaiciukas: " + i);
-				// isElementFound = true;
 				return i;
 			}
 		}
-		System.out.println("skaiciukas: " + 0);
-		// if (!isElementFound) {
-		// System.out.println("skaiciukas: " + 0);
-		// return 0;
-		// }
 		return 0;
+	}
 
+	public int findElementForConfirmingResults(String xpath, String name) {
+		numberOfRows = driver.findElements(By.xpath(xpath)).size();
+		for (int i = 1; i <= numberOfRows; i++) {
+			searchingName = driver.findElement(By.xpath(xpath + "[" + i + "]/td[1]")).getText();
+			if (searchingName.equals(name)) {
+				return i;
+			}
+		}
+		return 0;
 	}
 
 	public int findElementForEditingCandidate(String name, String surname, String birthDay, String partyName) {
@@ -115,32 +109,31 @@ public class Utilities {
 		return this;
 	}
 
-	public int randomNumber(int number) {
+	public int getRandomNumber(int number) {
 		Random randomGenerator = new Random();
 		randomInt = randomGenerator.nextInt(number);
 		return randomInt;
 	}
 
 	public String getRandomLine(List<String> list) {
-	    rand = new Random(); 
-	    String randomInt = list.get(rand.nextInt(list.size()));
-	    return randomInt;
+		rand = new Random();
+		String randomInt = list.get(rand.nextInt(list.size()));
+		return randomInt;
 	}
 
-	
 	public List<String> putTextFromFileToAList(String file) throws IOException {
 		DataReader dReader = new DataReader();
 		list = dReader.getTestData(file);
 		return list;
 	}
-	
-	public void dropDownListRandom(String id) { 
-        Select countyDistrictSelect = new Select(driver.findElement(By.id(id)));
-        List<WebElement> weblist = countyDistrictSelect.getOptions();
-        int optionsCount = weblist.size();
-        Random num = new Random();
-        int randomSelect = num.nextInt(optionsCount);
-        countyDistrictSelect.selectByIndex(randomSelect);
-    }
+
+	public void dropDownListRandom(String id) {
+		Select countyDistrictSelect = new Select(driver.findElement(By.id(id)));
+		List<WebElement> weblist = countyDistrictSelect.getOptions();
+		int optionsCount = weblist.size();
+		Random num = new Random();
+		int randomSelect = num.nextInt(optionsCount);
+		countyDistrictSelect.selectByIndex(randomSelect);
+	}
 
 }

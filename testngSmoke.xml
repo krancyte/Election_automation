@@ -7,6 +7,7 @@
 	<parameter name="countyName" value="Kniaudiškiečių" />
 	<parameter name="countyRandom" value="src/test/resources/countyRandom.txt" />
 	<parameter name="districtRandom" value="src/test/resources/districtRandom.txt" />
+	<parameter name="partyRandom" value="src/test/resources/partyRandom.txt" />
 	<parameter name="candidatesList" value="data-county-valid.csv" />
 	<parameter name="districtName" value="Žvaigždžių" />
 	<parameter name="districtAddress" value="Žvaigždžių g. 33" />
@@ -24,11 +25,9 @@
 	<parameter name="partyCsvFile" value="konservatoriai.csv" />
 	
 	<test name="ChromeTest">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="it.akademija.smoke.SmokeTest" />
-			
 		</classes>
 	</test>
-
 </suite>

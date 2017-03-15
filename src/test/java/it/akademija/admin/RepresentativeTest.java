@@ -2,29 +2,19 @@ package it.akademija.admin;
 
 import java.io.IOException;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import it.akademija.voting.VotingSystem;
 
 public class RepresentativeTest extends VotingSystem{
 
-	
-	
-	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@Parameters({"usernameAdmin", "password"})
 	@BeforeClass
-	public void setUp(String loginLink, String usernameAdmin, String password){
-	//	driver.get(adminLink);
+	public void setUp(String usernameAdmin, String password){
 		pageRepresentative = new RepresentativePage(driver);
 		pageLogin.login(usernameAdmin, password);
 	}
-	
-//	@AfterClass
-//	public void endingTestActivities() {	
-//		driver.close();
-//	}
 	
 	/**
 	 * TC07
@@ -33,12 +23,6 @@ public class RepresentativeTest extends VotingSystem{
 	@Test (priority = 15, enabled = true)
 	public void registerSingleRepresentativeTest(String representativeName, String representativeSurname, String districtName){
 		pageRepresentative.registerDistrictRepresentative(representativeName, representativeSurname, districtName);
-		
-//		String[] alertLine = driver.findElement(By.xpath("//div[contains(text(),'Vartotojo prisijungimo vardas:')]")).getText().split(" ");
-//		System.out.println(alertLine[3]);
-//		String repLogin = alertLine[3];
-//		login.add(repLogin);
-//		System.out.println("List: " + login.get(0));
 		Assert.assertTrue(pageRepresentative.alert.getText().contains("Apylinkës atstovas " + representativeName + " " + representativeSurname + " sukurtas."));
 	}
 	

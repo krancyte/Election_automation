@@ -1,40 +1,22 @@
 package it.akademija.admin;
 
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
-
 import it.akademija.voting.VotingSystem;
-
-import java.io.File;
 import java.io.IOException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-@Test(groups = "admin-actions")
 public class CountyTest extends VotingSystem{
 
 	private int numberOfTimesTestWasRan = 0;
 	
-	
-	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@Parameters({"usernameAdmin", "password"})
 	@BeforeClass
-	public void setUp(String loginLink, String usernameAdmin, String password){
-	//	driver.get(adminLink);
+	public void setUp(String usernameAdmin, String password){
 		pageCounty = new CountyPage(driver);
 		pageLogin.login(usernameAdmin, password);
 	}
-	
-//	@Parameters({ "countyFile", "newCountyName" })
-//	@AfterTest(alwaysRun = true)
-//	public void deleteAllRegisteredCounties(String countyFile, String newCountyName) throws IOException{
-//		pageCounty.deleteMultipleCounties(countyFile);
-//		pageCounty.deleteCounty(newCountyName);
-//		driver.close();
-//	}
 	
 	@Parameters({ "countyFile" })
 	@Test(priority = 3, enabled = true)
@@ -73,10 +55,10 @@ public class CountyTest extends VotingSystem{
 				pageCounty.alert.getText().contains("Apygardos pavadinimas pakeistas iš " + countyName + " į " + newCountyName));
 	}
 
-	@Parameters({ "newCountyName", "candidatesList" })
+	@Parameters({ "countyNameForVoting", "candidatesList" })
 	@Test(priority = 6, enabled = true)
-	public void addCandidatesListTest(String newCountyName, String candidatesList) {
-		pageCounty.addCandidatesList(newCountyName, candidatesList);
+	public void addCandidatesListTest(String countyNameForVoting, String candidatesList) {
+		pageCounty.addCandidatesList(countyNameForVoting, candidatesList);
 	}
 	
 }

@@ -4,17 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import it.akademija.voting.VotingSystem;
 
 public class PartyTest extends VotingSystem{
 	
 	private int numberOfTimesTestWasRan = 0;
 
-	@Parameters({"loginLink", "usernameAdmin", "password"})
+	@Parameters({"usernameAdmin", "password"})
 	@BeforeClass
-	public void setUp(String loginLink, String usernameAdmin, String password){
-	//	driver.get(adminLink);
+	public void setUp(String usernameAdmin, String password){
 		pageParty = new PartyPage(driver);
 		pageLogin.login(usernameAdmin, password);
 	}
@@ -26,7 +24,6 @@ public class PartyTest extends VotingSystem{
 	@Test (priority = 18, invocationCount = 2, enabled = true)
 	public void registerPartyTest(String partyName, String partyNumber,
 			String partyCsvFile){
-		pageParty = new PartyPage(driver);
 		pageParty.registerParty(partyName, partyNumber, partyCsvFile, "");
 		if (numberOfTimesTestWasRan == 0) {
 			Assert.assertTrue(pageParty.alert.getText().contains(partyName + " sukurta"));
@@ -84,7 +81,6 @@ public class PartyTest extends VotingSystem{
 	@Test(priority = 21, enabled = true)
 	public void deleteCandidatesTest(String partyName2){
 		pageParty.deleteCandidates(partyName2);
-	//	Assert.assertTrue(pageParty.alert.getText().contains("Partija " + partyName2 + " atnaujinta"));
 	}
 	
 }

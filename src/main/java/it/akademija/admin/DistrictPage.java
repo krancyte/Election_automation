@@ -1,10 +1,8 @@
 package it.akademija.admin;
 
 import java.io.IOException;
-
 import java.util.Iterator;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,16 +42,7 @@ public class DistrictPage {
 	WebElement buttonSubmit;
 
 	@FindBy(className = "alert")
-	WebElement alert;
-
-	@FindBy(className = "btn")
-	WebElement buttonToConfirmDeleting;
-
-	@FindBy(xpath = "//*[@id='searchable-table_filter']/label/input")
-	WebElement fieldSearch;
-
-	@FindBy(xpath = "//*[contains(@id, 'edit-district')]")
-	WebElement buttonEdit;
+	public WebElement alert;
 
 	@FindBy(xpath = "//*[contains(@id, 'confirm-delete-button')]")
 	WebElement buttonDelete;
@@ -86,7 +75,6 @@ public class DistrictPage {
 		}
 		fieldDistrictName.sendKeys(districtName);
 		if (enterOrEdit.equals("edit")) {
-			// System.out.println(districtName + " editina");
 			clearTheField(fieldAddress);
 		}
 		fieldAddress.sendKeys(districtAddress);
@@ -121,9 +109,7 @@ public class DistrictPage {
 			} else {
 				registerDistrict(district, districtAddressIterator.next(), districtVotersIterator.next(), county, "");
 			}
-			// utilities.waitToLoad("//*[@id='alert-success-fixed']");
 			utilities.waitToLoad("//*[@id='register-button']");
-
 			Assert.assertTrue(alert.getText().contains("Apylinkë " + district + " sukurta"));
 		}
 	}
@@ -132,16 +118,9 @@ public class DistrictPage {
 			String newDistrictVoters, String newCounty) {
 		menuDistricts.click();
 		firstLetter = districtName.toLowerCase().substring(0, 1);
-		System.out.println("raide: " + firstLetter);
-		// driver.findElement(By.linkText(firstLetter)).click();
 		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)),
 				districtName, "district");
-		System.out.println("editinimui eilute: " + districtRow);
-		// utilities.waitForJavascript();
 		driver.findElement(By.xpath("//tbody/tr[" + districtRow + "]//a[1]")).click();
-		// clearTheField(fieldDistrictName);
-		// clearTheField(fieldAddress);
-		// clearTheField(fieldVoters);
 		registerDistrict(newDistrictName, newDistrictAddress, newDistrictVoters, newCounty, "edit");
 	}
 
@@ -152,18 +131,10 @@ public class DistrictPage {
 
 	public void deleteDistrict(String districtName) {
 		firstLetter = districtName.toLowerCase().substring(0, 1);
-		System.out.println("raide: " + firstLetter);
-		// driver.findElement(By.linkText(firstLetter)).click();
 		districtRow = utilities.findElementForDeletingAndEditing(driver.findElement(By.linkText(firstLetter)),
 				districtName, "district");
-
-		// utilities.waitForJavascript();
-
-		// menuDistricts.click();
-		// utilities.waitToLoad("//*[@id='searchable-table_filter']/label/input").sendKeys(districtName);
 		buttonDelete.click();
 		utilities.waitToLoad("//*[starts-with(@id, 'delete-district')]").click();
-
 	}
 
 }

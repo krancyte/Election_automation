@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,12 +19,17 @@ public class RepresentativePage {
 	WebDriver driver;
 	private Utilities utilities;
 	private String[] alertLine;
-	private List<String> representativeUsernames = new ArrayList<>();
-	private List<String> representativePasswords = new ArrayList<>();
-	
-	
-//	private String representativeUsername;
-//	private String representativePassword;
+	private static List<String> representativeUsernames = new ArrayList<>();
+	private static List<String> representativePasswords = new ArrayList<>();
+	private Select dropdownDistrict;
+	private List<String> representativeName;
+	private List<String> representativeSurname;
+	private List<String> district;
+	private Iterator<String> representativeNameIterator;
+	private Iterator<String> representativeSurnameIterator;
+	private Iterator<String> districtIterator;
+	private String name;
+	private String surname;
 
 	@FindBy(id = "representative-button")
 	WebElement menuRepresentatives;
@@ -54,20 +58,6 @@ public class RepresentativePage {
 		utilities = new Utilities(driver);
 	}
 
-	private Select dropdownDistrict;
-	private List<String> representativeName;
-	private List<String> representativeSurname;
-	private List<String> district;
-	private Iterator<String> representativeNameIterator;
-	private Iterator<String> representativeSurnameIterator;
-	private Iterator<String> districtIterator;
-
-	// private String alertLine;
-	// private List<String> representativeLogin;
-	// private List<String> representativePassword;
-	private String name;
-	private String surname;
-
 	public void registerDistrictRepresentative(String name, String surname, String district) {
 		menuRepresentatives.click();
 		buttonRegister.click();
@@ -87,50 +77,31 @@ public class RepresentativePage {
 		representativeName = dReader.getTestData(representativeNamesFile);
 		representativeSurname = dReader.getTestData(representativeSurnamesFile);
 		district = dReader.getTestData(districtFile);
-
 		representativeNameIterator = representativeName.iterator();
 		representativeSurnameIterator = representativeSurname.iterator();
 		districtIterator = district.iterator();
-
 		while (representativeNameIterator.hasNext() && representativeSurnameIterator.hasNext()
 				&& districtIterator.hasNext()) {
 			name = representativeNameIterator.next();
 			surname = representativeSurnameIterator.next();
 			registerDistrictRepresentative(name, surname, districtIterator.next());
-
 			utilities.waitToLoad("//*[@id='register-button']");
-			// utilities.waitToLoad("//*[@id='alert-success-fixed']");
 			Assert.assertTrue(alert.getText().contains("Apylinkës atstovas " + name + " " + surname + " sukurtas."));
 		}
 	}
 
-	protected void getRepresentativesLoginAndPassword(){
-//	 alertLine = driver.findElement(By.xpath("//div[contains(text(),'Vartotojo prisijungimo vardas:')]/following::text()")).getText();
-//	 String[] mytext = alertLine.split("Vartotojo prisijungimo vardas:");
-//	 System.out.println("I am text after Vartotojo prisijungimo vardas:: "+ mytext[1]);
-	
-	 
-		alertLine = driver.findElement(By.xpath("//div[contains(text(),'Vartotojo prisijungimo vardas:')]")).getText().split(" ");
-	//	System.out.println(alertLine[3]);
-	//	representativeUsername = alertLine[3];
-	//	representativePassword = alertLine[5];
-		System.out.println(alertLine[3]);
-		System.out.println(alertLine[5]);
-		
-		
+	protected void getRepresentativesLoginAndPassword() {
+		alertLine = driver.findElement(By.xpath("//div[contains(text(),'Vartotojo prisijungimo vardas:')]")).getText()
+				.split(" ");
 		representativeUsernames.add(alertLine[3]);
 		representativePasswords.add(alertLine[5]);
-		System.out.println("List login 0: " + representativeUsernames.get(0));
-		System.out.println("List passw 0: " + representativePasswords.get(0));
-	//	System.out.println("List login 1: " + representativeUsernames.get(1));
-	//	System.out.println("List passw 1: " + representativePasswords.get(1));
-	 }
-	
-	public String getRepresentativeUsername(int index){
+	}
+
+	public String getRepresentativeUsername(int index) {
 		return representativeUsernames.get(index);
 	}
 
-	public String getRepresentativePassword(int index){
+	public String getRepresentativePassword(int index) {
 		return representativePasswords.get(index);
 	}
 }
