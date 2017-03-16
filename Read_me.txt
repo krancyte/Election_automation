@@ -1,0 +1,1 @@
+Tests works with chrome and firefox browsers (changing parameter value in testng.xml and testngSmoke.xml).

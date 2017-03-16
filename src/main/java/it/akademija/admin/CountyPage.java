@@ -67,6 +67,7 @@ public class CountyPage {
 			utilities.waitToLoad("//tr[" + countyRow + "]//button[contains(@id,'delete-button')]").click();
 			utilities.waitToLoad("//*[@id='register-button']");
 			Assert.assertTrue(alert.getText().contains("Apygarda " + countyName + " ištrinta"));
+			utilities.waitToLoad("//*[@id='register-button']");
 		}
 	}
 

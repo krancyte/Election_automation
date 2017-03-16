@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="29" passed="29">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="60008" started-at="2017-03-15T12:01:34Z" finished-at="2017-03-15T12:02:34Z">
+  <suite name="Suite" duration-ms="231786" started-at="2017-03-16T09:45:57Z" finished-at="2017-03-16T09:49:48Z">
     <groups>
+      <group name="county-name">
+        <method signature="CountyTest.editCountyTest(java.lang.String, java.lang.String)[pri:4, instance:it.akademija.admin.CountyTest@192d43ce]" name="editCountyTest" class="it.akademija.admin.CountyTest"/>
+      </group> <!-- county-name -->
     </groups>
-    <test name="ChromeTest" duration-ms="60008" started-at="2017-03-15T12:01:34Z" finished-at="2017-03-15T12:02:34Z">
-      <class name="it.akademija.smoke.SmokeTest">
-        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.smoke.SmokeTest@548e7350]" name="settingUp" is-config="true" duration-ms="12250" started-at="2017-03-15T14:01:34Z" finished-at="2017-03-15T14:01:47Z">
+    <test name="Suite" duration-ms="231786" started-at="2017-03-16T09:45:57Z" finished-at="2017-03-16T09:49:48Z">
+      <class name="it.akademija.admin.CandidatesTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.CandidatesTest@1ab3a8c8]" name="settingUp" is-config="true" duration-ms="8682" started-at="2017-03-16T11:47:28Z" finished-at="2017-03-16T11:47:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -33,129 +36,936 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:it.akademija.smoke.SmokeTest@548e7350]" name="setUp" is-config="true" duration-ms="23" started-at="2017-03-15T14:01:47Z" finished-at="2017-03-15T14:01:47Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.CandidatesTest@1ab3a8c8]" name="setUp" is-config="true" duration-ms="611" started-at="2017-03-16T11:47:37Z" finished-at="2017-03-16T11:47:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAdministrator(java.lang.String, java.lang.String)[pri:1, instance:it.akademija.smoke.SmokeTest@548e7350]" name="loginAdministrator" duration-ms="787" started-at="2017-03-15T14:01:47Z" finished-at="2017-03-15T14:01:47Z">
+        <test-method status="PASS" signature="editNameAndSurnameTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:23, instance:it.akademija.admin.CandidatesTest@1ab3a8c8]" name="editNameAndSurnameTest" duration-ms="6812" started-at="2017-03-16T11:47:37Z" finished-at="2017-03-16T11:47:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[37]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[Algirdas]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Paleckis]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1966-06-06]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Algis]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Kurinskis]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1959-06-15]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Socialdemokratas]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[88]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAdministrator -->
-        <test-method status="PASS" signature="registerCounty(java.lang.String)[pri:2, instance:it.akademija.smoke.SmokeTest@548e7350]" name="registerCounty" duration-ms="3990" started-at="2017-03-15T14:01:47Z" finished-at="2017-03-15T14:01:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[src/test/resources/countyRandom.txt]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerCounty -->
-        <test-method status="PASS" signature="registerDistrict(java.lang.String, java.lang.String)[pri:3, instance:it.akademija.smoke.SmokeTest@548e7350]" name="registerDistrict" duration-ms="2823" started-at="2017-03-15T14:01:51Z" finished-at="2017-03-15T14:01:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[src/test/resources/districtRandom.txt]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Žvaigždžių g. 33]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerDistrict -->
-        <test-method status="PASS" signature="registerRepresentative(java.lang.String, java.lang.String)[pri:4, instance:it.akademija.smoke.SmokeTest@548e7350]" name="registerRepresentative" duration-ms="7901" started-at="2017-03-15T14:01:54Z" finished-at="2017-03-15T14:02:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Dovilė]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Pankavilė]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerRepresentative -->
-        <test-method status="PASS" signature="registerParty(java.lang.String, java.lang.String)[pri:5, instance:it.akademija.smoke.SmokeTest@548e7350]" name="registerParty" duration-ms="1470" started-at="2017-03-15T14:02:02Z" finished-at="2017-03-15T14:02:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[src/test/resources/partyRandom.txt]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[konservatoriai.csv]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerParty -->
-        <test-method status="PASS" signature="addCandidatesList(java.lang.String)[pri:6, instance:it.akademija.smoke.SmokeTest@548e7350]" name="addCandidatesList" duration-ms="8692" started-at="2017-03-15T14:02:04Z" finished-at="2017-03-15T14:02:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[data-county-valid.csv]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCandidatesList -->
-        <test-method status="PASS" signature="fillingSingleMemberResults()[pri:8, instance:it.akademija.smoke.SmokeTest@548e7350]" name="fillingSingleMemberResults" duration-ms="2149" started-at="2017-03-15T14:02:12Z" finished-at="2017-03-15T14:02:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillingSingleMemberResults -->
-        <test-method status="PASS" signature="fillingMultiMemberResults()[pri:9, instance:it.akademija.smoke.SmokeTest@548e7350]" name="fillingMultiMemberResults" duration-ms="3865" started-at="2017-03-15T14:02:14Z" finished-at="2017-03-15T14:02:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillingMultiMemberResults -->
-        <test-method status="PASS" signature="confirmingSingleMemberResults(java.lang.String, java.lang.String)[pri:11, instance:it.akademija.smoke.SmokeTest@548e7350]" name="confirmingSingleMemberResults" duration-ms="14841" started-at="2017-03-15T14:02:18Z" finished-at="2017-03-15T14:02:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmingSingleMemberResults -->
-        <test-method status="PASS" signature="confirmingMultiMemberResults()[pri:12, instance:it.akademija.smoke.SmokeTest@548e7350]" name="confirmingMultiMemberResults" duration-ms="1107" started-at="2017-03-15T14:02:33Z" finished-at="2017-03-15T14:02:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmingMultiMemberResults -->
-        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.smoke.SmokeTest@548e7350]" name="endingTestActivities" is-config="true" duration-ms="48" started-at="2017-03-15T14:02:34Z" finished-at="2017-03-15T14:02:34Z">
+        </test-method> <!-- editNameAndSurnameTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.CandidatesTest@1ab3a8c8]" name="endingTestActivities" is-config="true" duration-ms="82" started-at="2017-03-16T11:47:44Z" finished-at="2017-03-16T11:47:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endingTestActivities -->
-      </class> <!-- it.akademija.smoke.SmokeTest -->
-    </test> <!-- ChromeTest -->
+      </class> <!-- it.akademija.admin.CandidatesTest -->
+      <class name="it.akademija.admin.PartyTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.PartyTest@6973b51b]" name="settingUp" is-config="true" duration-ms="8668" started-at="2017-03-16T11:47:05Z" finished-at="2017-03-16T11:47:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.PartyTest@6973b51b]" name="setUp" is-config="true" duration-ms="707" started-at="2017-03-16T11:47:13Z" finished-at="2017-03-16T11:47:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerPartyWithOtherFileTest(java.lang.String, java.lang.String, java.lang.String)[pri:17, instance:it.akademija.admin.PartyTest@6973b51b]" name="registerPartyWithOtherFileTest" duration-ms="1268" started-at="2017-03-16T11:47:14Z" finished-at="2017-03-16T11:47:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bruzgesss partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[442]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[data-party-not-csv.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPartyWithOtherFileTest -->
+        <test-method status="PASS" signature="registerPartyWithoutFileTest(java.lang.String, java.lang.String, java.lang.String)[pri:17, instance:it.akademija.admin.PartyTest@6973b51b]" name="registerPartyWithoutFileTest" duration-ms="1040" started-at="2017-03-16T11:47:15Z" finished-at="2017-03-16T11:47:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bruzgesss partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[442]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPartyWithoutFileTest -->
+        <test-method status="PASS" signature="registerPartyTest(java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:it.akademija.admin.PartyTest@6973b51b]" name="registerPartyTest" duration-ms="1105" started-at="2017-03-16T11:47:16Z" finished-at="2017-03-16T11:47:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zuokuciooo partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[56]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[data-party-3.csv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPartyTest -->
+        <test-method status="PASS" signature="registerPartyTest(java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:it.akademija.admin.PartyTest@6973b51b]" name="registerPartyTest" duration-ms="834" started-at="2017-03-16T11:47:18Z" finished-at="2017-03-16T11:47:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zuokuciooo partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[56]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[data-party-3.csv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPartyTest -->
+        <test-method status="PASS" signature="registerPartyTest2(java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:it.akademija.admin.PartyTest@6973b51b]" name="registerPartyTest2" duration-ms="1148" started-at="2017-03-16T11:47:18Z" finished-at="2017-03-16T11:47:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bruzgesss partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[442]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[data-party-3.csv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPartyTest2 -->
+        <test-method status="PASS" signature="editPartyTest(java.lang.String, java.lang.String, java.lang.String)[pri:19, instance:it.akademija.admin.PartyTest@6973b51b]" name="editPartyTest" duration-ms="3072" started-at="2017-03-16T11:47:20Z" finished-at="2017-03-16T11:47:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zuokuciooo partija]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Zuokucio partija]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[66]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPartyTest -->
+        <test-method status="PASS" signature="deletePartyTest(java.lang.String)[pri:20, instance:it.akademija.admin.PartyTest@6973b51b]" name="deletePartyTest" duration-ms="2735" started-at="2017-03-16T11:47:23Z" finished-at="2017-03-16T11:47:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zuokucio partija]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePartyTest -->
+        <test-method status="PASS" signature="deleteCandidatesTest(java.lang.String)[pri:21, instance:it.akademija.admin.PartyTest@6973b51b]" name="deleteCandidatesTest" duration-ms="2623" started-at="2017-03-16T11:47:25Z" finished-at="2017-03-16T11:47:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bruzgesss partija]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCandidatesTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.PartyTest@6973b51b]" name="endingTestActivities" is-config="true" duration-ms="66" started-at="2017-03-16T11:47:28Z" finished-at="2017-03-16T11:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.admin.PartyTest -->
+      <class name="it.akademija.admin.RepresentativeTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.RepresentativeTest@1afd44cb]" name="settingUp" is-config="true" duration-ms="9446" started-at="2017-03-16T11:46:49Z" finished-at="2017-03-16T11:46:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.RepresentativeTest@1afd44cb]" name="setUp" is-config="true" duration-ms="577" started-at="2017-03-16T11:46:58Z" finished-at="2017-03-16T11:46:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerMultipleRepresentativesTest(java.lang.String, java.lang.String, java.lang.String)[pri:15, instance:it.akademija.admin.RepresentativeTest@1afd44cb]" name="registerMultipleRepresentativesTest" duration-ms="4621" started-at="2017-03-16T11:46:59Z" finished-at="2017-03-16T11:47:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/representativeNames-input.txt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[src/test/resources/representativeSurnames-input.txt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/variousDistricts-input.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMultipleRepresentativesTest -->
+        <test-method status="PASS" signature="registerSingleRepresentativeTest(java.lang.String, java.lang.String, java.lang.String)[pri:15, instance:it.akademija.admin.RepresentativeTest@1afd44cb]" name="registerSingleRepresentativeTest" duration-ms="1242" started-at="2017-03-16T11:47:03Z" finished-at="2017-03-16T11:47:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Birutė]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Stolytė]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Fabijonkių]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerSingleRepresentativeTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.RepresentativeTest@1afd44cb]" name="endingTestActivities" is-config="true" duration-ms="129" started-at="2017-03-16T11:47:05Z" finished-at="2017-03-16T11:47:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.admin.RepresentativeTest -->
+      <class name="it.akademija.voting.DeletionOfAllData">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.voting.DeletionOfAllData@40ef3420]" name="settingUp" is-config="true" duration-ms="8938" started-at="2017-03-16T11:48:59Z" finished-at="2017-03-16T11:49:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.voting.DeletionOfAllData@40ef3420]" name="setUp" is-config="true" duration-ms="625" started-at="2017-03-16T11:49:08Z" finished-at="2017-03-16T11:49:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteAllData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:100, instance:it.akademija.voting.DeletionOfAllData@40ef3420]" name="deleteAllData" duration-ms="38844" started-at="2017-03-16T11:49:09Z" finished-at="2017-03-16T11:49:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/county-input.txt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Zuokucio partija]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Bruzgesss partija]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAllData -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:it.akademija.voting.DeletionOfAllData@40ef3420]" name="logout" is-config="true" duration-ms="638" started-at="2017-03-16T11:49:48Z" finished-at="2017-03-16T11:49:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.voting.DeletionOfAllData@40ef3420]" name="endingTestActivities" is-config="true" duration-ms="137" started-at="2017-03-16T11:49:48Z" finished-at="2017-03-16T11:49:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.voting.DeletionOfAllData -->
+      <class name="it.akademija.representative.MultiMemberTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.representative.MultiMemberTest@333291e3]" name="settingUp" is-config="true" duration-ms="6101" started-at="2017-03-16T11:47:55Z" finished-at="2017-03-16T11:48:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:it.akademija.representative.MultiMemberTest@333291e3]" name="setUp" is-config="true" duration-ms="3045" started-at="2017-03-16T11:48:01Z" finished-at="2017-03-16T11:48:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillingMultiMemberResults()[pri:30, instance:it.akademija.representative.MultiMemberTest@333291e3]" name="fillingMultiMemberResults" duration-ms="2800" started-at="2017-03-16T11:48:04Z" finished-at="2017-03-16T11:48:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillingMultiMemberResults -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.representative.MultiMemberTest@333291e3]" name="endingTestActivities" is-config="true" duration-ms="69" started-at="2017-03-16T11:48:07Z" finished-at="2017-03-16T11:48:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.representative.MultiMemberTest -->
+      <class name="it.akademija.admin.ResultsTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.ResultsTest@479d31f3]" name="settingUp" is-config="true" duration-ms="8617" started-at="2017-03-16T11:48:07Z" finished-at="2017-03-16T11:48:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.ResultsTest@479d31f3]" name="setUp" is-config="true" duration-ms="586" started-at="2017-03-16T11:48:15Z" finished-at="2017-03-16T11:48:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteResultsInSingleMemberTest(java.lang.String)[pri:35, instance:it.akademija.admin.ResultsTest@479d31f3]" name="deleteResultsInSingleMemberTest" duration-ms="29197" started-at="2017-03-16T11:48:16Z" finished-at="2017-03-16T11:48:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Papilėniškių]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteResultsInSingleMemberTest -->
+        <test-method status="PASS" signature="deleteResultsInMultiMemberTest(java.lang.String)[pri:36, instance:it.akademija.admin.ResultsTest@479d31f3]" name="deleteResultsInMultiMemberTest" duration-ms="13966" started-at="2017-03-16T11:48:45Z" finished-at="2017-03-16T11:48:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Papilėniškių]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteResultsInMultiMemberTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.ResultsTest@479d31f3]" name="endingTestActivities" is-config="true" duration-ms="59" started-at="2017-03-16T11:48:59Z" finished-at="2017-03-16T11:48:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.admin.ResultsTest -->
+      <class name="it.akademija.representative.SingleMemberTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.representative.SingleMemberTest@43195e57]" name="settingUp" is-config="true" duration-ms="6153" started-at="2017-03-16T11:47:44Z" finished-at="2017-03-16T11:47:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:it.akademija.representative.SingleMemberTest@43195e57]" name="setUp" is-config="true" duration-ms="2969" started-at="2017-03-16T11:47:50Z" finished-at="2017-03-16T11:47:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillingSingleMemberResults()[pri:27, instance:it.akademija.representative.SingleMemberTest@43195e57]" name="fillingSingleMemberResults" duration-ms="1410" started-at="2017-03-16T11:47:53Z" finished-at="2017-03-16T11:47:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillingSingleMemberResults -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.representative.SingleMemberTest@43195e57]" name="endingTestActivities" is-config="true" duration-ms="59" started-at="2017-03-16T11:47:55Z" finished-at="2017-03-16T11:47:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.representative.SingleMemberTest -->
+      <class name="it.akademija.admin.DistrictTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.DistrictTest@72057ecf]" name="settingUp" is-config="true" duration-ms="9993" started-at="2017-03-16T11:46:21Z" finished-at="2017-03-16T11:46:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.DistrictTest@72057ecf]" name="setUp" is-config="true" duration-ms="583" started-at="2017-03-16T11:46:31Z" finished-at="2017-03-16T11:46:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerDistrictTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:it.akademija.admin.DistrictTest@72057ecf]" name="registerDistrictTest" duration-ms="2004" started-at="2017-03-16T11:46:32Z" finished-at="2017-03-16T11:46:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fabijonkių]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fabijonų g. 15, Vilnius]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2416]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerDistrictTest -->
+        <test-method status="PASS" signature="registerDistrictTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:it.akademija.admin.DistrictTest@72057ecf]" name="registerDistrictTest" duration-ms="1009" started-at="2017-03-16T11:46:34Z" finished-at="2017-03-16T11:46:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fabijonkių]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fabijonų g. 15, Vilnius]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2416]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerDistrictTest -->
+        <test-method status="PASS" signature="registerExistingDistrictAndAssigntToDifferentCountyTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:11, instance:it.akademija.admin.DistrictTest@72057ecf]" name="registerExistingDistrictAndAssigntToDifferentCountyTest" duration-ms="1382" started-at="2017-03-16T11:46:35Z" finished-at="2017-03-16T11:46:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fabijonkių]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fabijonų g. 15, Vilnius]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2416]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Naujamiestėnų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerExistingDistrictAndAssigntToDifferentCountyTest -->
+        <test-method status="PASS" signature="registerMultipleDistrictsToDifferentCountiesTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:11, instance:it.akademija.admin.DistrictTest@72057ecf]" name="registerMultipleDistrictsToDifferentCountiesTest" duration-ms="3790" started-at="2017-03-16T11:46:36Z" finished-at="2017-03-16T11:46:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/variousDistricts-input.txt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[src/test/resources/variousDistrictsAddress-input.txt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/variousDistrictsVoters-input.txt]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[src/test/resources/county-input.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMultipleDistrictsToDifferentCountiesTest -->
+        <test-method status="PASS" signature="registerMultipleDistrictsToOneCountyTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:11, instance:it.akademija.admin.DistrictTest@72057ecf]" name="registerMultipleDistrictsToOneCountyTest" duration-ms="3498" started-at="2017-03-16T11:46:40Z" finished-at="2017-03-16T11:46:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/district-input.txt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[src/test/resources/districtAddress-input.txt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/resources/districtVoters-input.txt]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMultipleDistrictsToOneCountyTest -->
+        <test-method status="PASS" signature="editDistrictTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:12, instance:it.akademija.admin.DistrictTest@72057ecf]" name="editDistrictTest" duration-ms="2804" started-at="2017-03-16T11:46:43Z" finished-at="2017-03-16T11:46:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jovariškių]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jovarikantiškių]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[S. Stanevičiaus g. 100, Vilnius]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDistrictTest -->
+        <test-method status="PASS" signature="deleteDistrictTest(java.lang.String)[pri:13, instance:it.akademija.admin.DistrictTest@72057ecf]" name="deleteDistrictTest" duration-ms="2407" started-at="2017-03-16T11:46:46Z" finished-at="2017-03-16T11:46:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rugiškių]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDistrictTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.DistrictTest@72057ecf]" name="endingTestActivities" is-config="true" duration-ms="85" started-at="2017-03-16T11:46:49Z" finished-at="2017-03-16T11:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.admin.DistrictTest -->
+      <class name="it.akademija.admin.CountyTest">
+        <test-method status="PASS" signature="settingUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.CountyTest@192d43ce]" name="settingUp" is-config="true" duration-ms="8348" started-at="2017-03-16T11:45:57Z" finished-at="2017-03-16T11:46:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:9090/#/login/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingUp -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:it.akademija.admin.CountyTest@192d43ce]" name="setUp" is-config="true" duration-ms="3656" started-at="2017-03-16T11:46:05Z" finished-at="2017-03-16T11:46:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerCountyTest(java.lang.String)[pri:3, instance:it.akademija.admin.CountyTest@192d43ce]" name="registerCountyTest" duration-ms="1216" started-at="2017-03-16T11:46:09Z" finished-at="2017-03-16T11:46:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akmeninės]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerCountyTest -->
+        <test-method status="PASS" signature="registerCountyTest(java.lang.String)[pri:3, instance:it.akademija.admin.CountyTest@192d43ce]" name="registerCountyTest" duration-ms="738" started-at="2017-03-16T11:46:10Z" finished-at="2017-03-16T11:46:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akmeninės]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerCountyTest -->
+        <test-method status="PASS" signature="registerMultipleCountiesTest(java.lang.String)[pri:3, instance:it.akademija.admin.CountyTest@192d43ce]" name="registerMultipleCountiesTest" duration-ms="3261" started-at="2017-03-16T11:46:11Z" finished-at="2017-03-16T11:46:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/county-input.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMultipleCountiesTest -->
+        <test-method status="PASS" signature="editCountyTest(java.lang.String, java.lang.String)[pri:4, instance:it.akademija.admin.CountyTest@192d43ce]" name="editCountyTest" duration-ms="2079" started-at="2017-03-16T11:46:14Z" finished-at="2017-03-16T11:46:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akmeninės]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Akmeninikų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCountyTest -->
+        <test-method status="PASS" signature="deleteCountyTest(java.lang.String)[pri:5, instance:it.akademija.admin.CountyTest@192d43ce]" name="deleteCountyTest" duration-ms="2734" started-at="2017-03-16T11:46:16Z" finished-at="2017-03-16T11:46:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Senamiestėnų]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCountyTest -->
+        <test-method status="PASS" signature="addCandidatesListTest(java.lang.String, java.lang.String)[pri:6, instance:it.akademija.admin.CountyTest@192d43ce]" name="addCandidatesListTest" duration-ms="2305" started-at="2017-03-16T11:46:19Z" finished-at="2017-03-16T11:46:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kainavininkų]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[data-county.csv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCandidatesListTest -->
+        <test-method status="PASS" signature="endingTestActivities()[pri:0, instance:it.akademija.admin.CountyTest@192d43ce]" name="endingTestActivities" is-config="true" duration-ms="117" started-at="2017-03-16T11:46:21Z" finished-at="2017-03-16T11:46:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endingTestActivities -->
+      </class> <!-- it.akademija.admin.CountyTest -->
+    </test> <!-- Suite -->
   </suite> <!-- Suite -->
 </testng-results>

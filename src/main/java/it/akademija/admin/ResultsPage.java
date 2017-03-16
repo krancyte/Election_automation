@@ -47,6 +47,7 @@ public class ResultsPage {
 		utilities.waitForJavascript();
 		menuResults.click();
 		buttonSingleMember.click();
+		buttonRefresh.click();
 		districtRowToConfirm = utilities.findElementForConfirmingResults(xpathSingleMemebr, district);
 		driver.findElement(By.xpath("//*[@id='results1']//tbody/tr[" + districtRowToConfirm + "]//*[contains(@id, 'delete-button')]")).click();
 		utilities.waitToLoad("//*[contains(@id, 'confirmationModalSingle')]//div[3]//button[1]").click();
@@ -56,8 +57,8 @@ public class ResultsPage {
 	
 	public void deleteResultsInMultiMember(String district) {
 		utilities.waitForJavascript();
-		menuResults.click();
 		buttonMultiMember.click();
+		buttonRefresh.click();
 		districtRowToConfirm = utilities.findElementForConfirmingResults(xpathMultiMemebr, district);
 		driver.findElement(By.xpath("//*[@id='results2']//tbody/tr[" + districtRowToConfirm + "]//*[contains(@id, 'delete-button')]")).click();
 		utilities.waitToLoad("//*[contains(@id, 'confirmationModalundefined')]//div[3]//button[1]").click();

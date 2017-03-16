@@ -49,19 +49,76 @@
   <parameter name="candidateName" value="Algirdas"/>
   <parameter name="candidateSurname" value="Paleckis"/>
   <parameter name="partyCsvFile" value="data-party-3.csv"/>
+  <parameter name="districtForVoting" value="Papilėniškių"/>
   <parameter name="newPartyName" value="Zuokucio partija"/>
   <test name="Suite(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="it.akademija.voting.DeletionOfAllData">
+        <methods>
+          <include name="deleteAllData" invocation-numbers="0"/>
+          <include name="settingUp"/>
+          <include name="setUp"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- it.akademija.voting.DeletionOfAllData -->
+      <class name="it.akademija.admin.PartyTest">
+        <methods>
+          <include name="settingUp"/>
+          <include name="setUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.admin.PartyTest -->
+      <class name="it.akademija.admin.DistrictTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="settingUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.admin.DistrictTest -->
       <class name="it.akademija.admin.ResultsTest">
         <methods>
           <include name="setUp"/>
-          <include name="deleteResultsInMultiMemberTest"/>
+          <include name="deleteResultsInMultiMemberTest" invocation-numbers="0"/>
           <include name="settingUp"/>
-          <include name="deleteResultsInSingleMemberTest"/>
           <include name="endingTestActivities"/>
         </methods>
       </class> <!-- it.akademija.admin.ResultsTest -->
+      <class name="it.akademija.representative.SingleMemberTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="settingUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.representative.SingleMemberTest -->
+      <class name="it.akademija.representative.MultiMemberTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="settingUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.representative.MultiMemberTest -->
+      <class name="it.akademija.admin.CandidatesTest">
+        <methods>
+          <include name="settingUp"/>
+          <include name="setUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.admin.CandidatesTest -->
+      <class name="it.akademija.admin.CountyTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="settingUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.admin.CountyTest -->
+      <class name="it.akademija.admin.RepresentativeTest">
+        <methods>
+          <include name="settingUp"/>
+          <include name="setUp"/>
+          <include name="endingTestActivities"/>
+        </methods>
+      </class> <!-- it.akademija.admin.RepresentativeTest -->
     </classes>
   </test> <!-- Suite(failed) -->
 </suite> <!-- Failed suite [Suite] -->
